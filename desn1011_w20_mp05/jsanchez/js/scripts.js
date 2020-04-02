@@ -1,13 +1,8 @@
 $(function() {
-
     $("html").mousewheel(function(event, delta) {
- 
        this.scrollLeft -= (delta);
- 
        event.preventDefault();
- 
     });
- 
  });
  
 $('.close-popup').click(function (event) {
