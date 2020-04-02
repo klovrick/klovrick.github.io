@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /*Disable scrolling*/
+}
+
+body {
+    background-image: url(../images/watercolour.png);
+}
+
+.main {
+    /*Creating space for "Get a Clue" text*/
+    height: 100%;
+    float: left;
+    max-width: 50%;
+}
+
+.img-container {
+    /*Space for character cards*/
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+
+.charCard {
+    /*Absolute positioning so animations do not disturb document flow*/
+    position: absolute;
+    height: 80%;
+    margin: 10% 25% 0 25%;
+    top: 100vh; /*Card starting position off the bottom of the screen*/
+}
+
+.charImg {
+    position: absolute;
+    height: 80%;
+    margin: 10% 25% 0 25%;
+}
+
+.name {
+    position: relative;
+    color: #DFBDB2;
+    font-family: Mr De Haviland;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 0;
+    text-align: center;
+    z-index: 10111;
+    margin: 0 25% 0 25%;
+    opacity: 0; /*Start hidden until animation finishes*/
+    animation: fadeIn 1s 4.5s ease-in; /*Delay fade-in 4.5s until cards finish moving*/
+    animation-fill-mode: forwards; /*Keep final position once animation finishes*/
+    top: 90%; /*position name at bottom of card*/
+}
+
+.cher .name, .tai .name, .christian .name {
+    top: 0; /*Position name at top of character card*/
+}
+
+.geta {
+    z-index: -100;
+    top: 1em;
+    left: -20px;
+    position: relative;
+    font-family: Vidaloka;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 248px;
+    margin: 0;
+    
+    color: #DFBDB2;
+    
+    animation: fadeIn 0.7s ease-in;
+}
+
+.clue {
+    z-index: -1111;
+    position: relative;
+    font-family: Mr De Haviland;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 900px;
+    line-height: 0;
+    margin: 0;
+    color: #EEDAD3;
+    top: 0.4em;
+    left: -7px;
+    transform: rotate(-21.12deg);
+    animation: fadeIn 1s ease-in;
+}
+
+
+.cher {
+    /*All cards finish moving up in 2.5s*/
+    /*All cards finish moving to final position in 2.5s*/
+    /*Full animation length is 5s*/
+    animation: charUp .5s ease-in-out, cherSide .5s 2.5s ease-out; /*Move card up. After 2.5s move card to the side*/
+    animation-fill-mode: forwards;
+}
+
+.dionne {
+    animation: charUp .5s .5s ease-in-out, dionneSide .5s 3s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.tai {
+    animation: charUp .5s 1s ease-in-out, taiSide .5s 3.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.amber {
+    animation: charUp .5s 1.5s ease-in-out, amberSide .5s 4s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.christian {
+    animation: charUp .5s 2s ease-in-out, christianSide .5s 4.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+/*Cards "expand" when you hover the mouse over them*/
+.charCard img:hover, .charCard .name {
+    z-index: 999;
+    transform: scale(1.2);
+}
+
+/*Hide outfit sections at start*/
+.outfitone, .outfittwo, .outfitthree, .outfitfour{
+    display: none;
+} 
+
+.text {
+    position: absolute;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #8C8C8C;
+    top: 10%;
+    display: none;
+}
+
+.cher-text
+{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #8C8C8C;
+    top: 10%;
+}
+
+.text-head, .char-head {
+    font-family: Vidaloka;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    color: #F0BDBA;
+}
+
+.back 
+{
+    z-index: 9999999;
+    font-family: 'Vidaloka', serif;
+    font-size: 1.125rem;
+    color: #666666;
+    text-decoration: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    display: none;
+}
+
+.outfit-image 
+{
+    height: 80vh;
+}
+
+.outfit-image:hover {
+    z-index: 999;
+    transform: scale(1.2);
+}
+
+.page {
+    z-index: 1;
+    text-align: center;
+    margin-top: 5em;
+    width: 100%;
+}
+
+
+.cher-plaid {
+    height: 100%;
+}
+
+.first-image {
+    height: 80vh;
+}
+
+.first-image:hover {
+    z-index: 999;
+    transform: scale(1.2);
+}
+
+.outfit-text {
+    padding-top: 4rem;
+}
+
+.outfit-image{
+    margin-left: -5rem;
+}
+
+.plaid-img {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: blue;
+}
+
+
+/*==================================================Animations Section=======================================================================*/
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    
+    
+    100% {
+        opacity: 100%;
+    }
+}
+
+/*Move each card up from starting position*/
+@keyframes charUp {
+    0% {
+        opacity: 100%;
+        top: 90vh;
+    }
+    
+    100%{
+        opacity: 100%;
+        top: 0vh;
+    }
+    
+}
+/*Move Each character to their final position*/
+@keyframes cherSide {
+    0%{
+    }
+    
+    100%{
+        
+        transform: translateX(-42vw) scale(0.6) rotate(-17.9deg);
+    }
+}
+
+@keyframes dionneSide {
+    0%{
+    }
+    
+    100%{
+        
+        transform: translateX(-34vw) scale(0.6) rotate(16.1deg);
+    }
+}
+
+@keyframes taiSide {
+    0%{
+    }
+    
+    100%{
+       
+        transform: translateX(-19vw) scale(0.6) rotate(-0.58deg);
+    }
+}
+
+@keyframes amberSide {
+    0%{
+    }
+    
+    100%{
+        
+        transform: translateX(-12vw) scale(0.6) rotate(-8.3deg);
+    }
+}
+
+@keyframes christianSide {
+    0%{
+        
+    }
+    
+    100%{
+
+        transform: translateX(-3vw) scale(0.6) rotate(10.7deg);
+    }
+}

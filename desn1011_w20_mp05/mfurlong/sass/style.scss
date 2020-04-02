@@ -1,0 +1,884 @@
+* {box-sizing: border-box;}
+@import 'flexboxgrid';
+
+$text: #281B04;
+$myred: #9C3B26;
+$darkbrown: #867152;
+$lightbrown: #D7CBA0;
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: $text;
+    overflow-y: hidden;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    color: $myred;
+    font-size: 2.75rem;
+    @media (min-width:768px) {
+        font-size: 4.57rem;
+    }
+    &.open {
+        text-align: center;
+        font-size: 5rem;
+        @media (min-width: 768px) {
+            font-size: 8rem;
+        }
+    }
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: $myred;
+    margin-bottom: 0;
+    font-size: 2rem;
+    @media (min-width:768px) {
+        font-size: 3.43rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    &.large {
+        font-size: 1.29rem;
+        &.quote {
+            font-weight: 300;
+        }
+    }
+    &.space {
+        margin: 4.5rem;
+    }
+    &.open {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        @media (min-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+}
+
+
+img {
+    display: inline-block;
+    &.mapicon {
+        position: fixed;
+        height: 3rem;
+        width: auto;
+        right: 3rem;
+        top: 2rem;
+        z-index: 180;
+        }
+    &.helpicon {
+        position: fixed;
+        height: 1.5rem;
+        width: auto;
+        left: 3rem;
+        top: 2rem;
+        z-index: 180;
+    }
+
+    &.mapshape {
+        position: absolute;
+        top:0;
+        left: 53%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: auto;
+    }
+
+    &.background {
+        position: fixed;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        z-index: -1000;
+    }
+}
+
+
+.timeline {
+    height: 100vh;
+    display: inline-flex;
+    .section {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        padding-top: 70px;
+        @media (min-width: 768px) {
+            padding-top: 150px;
+        }
+        &.dinosaur-bones {
+            .alan-ellie {
+                position: absolute;
+                bottom: 0;
+                left: 1rem;
+                width: 52%;
+                @media (min-width:411px) {
+                    width: 82%;
+                }
+                @media (min-width:500px) {
+                    width: 62%;
+                }
+                @media (min-width:700px) {
+                    width: 52%;
+                }
+                @media (min-width:768px) {
+                    width: 42%;
+                }
+            }
+            .john {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 40%;
+                @media (min-width:768px) {
+                    right: 8;
+                    width: 30%;
+                }
+                @media (min-width:1300px) {
+                    right: 0;
+                }
+            }
+            .long-neck {
+                position: absolute;
+                bottom: 0;
+                right: -30%;
+                width: 70%;
+                @media (min-width:411px) {
+                    width: 80%;
+                }
+                @media (min-width:600px) {
+                    width: 65%;
+                }
+                @media (min-width:768px) {
+                    right: -8%;
+                    width: 48%;
+                }
+                @media (min-width:1300px) {
+                    right: -16%;
+                }
+            }
+        }
+        &.the-park {
+            .group {
+                position: absolute;
+                bottom: 0;
+                right: 13%;
+                width: 70%;
+                @media (min-width:768px) {
+                    right: 30%;
+                    width: 50%;
+                }
+                @media (min-width:1300px) {
+                    right: 16%;
+                }
+            }
+            .long-necks {
+                position: absolute;
+                bottom: 20%;
+                right: -4%;
+                width: 40%;
+                @media (min-width:768px) {
+                    bottom: 10%;
+                    right: -4%;
+                    width: 40%;
+                }
+            }
+            .column {
+                position: absolute;
+                bottom: -10%;
+                right: -15%;
+                width: 30%;
+                @media (min-width:992px) {
+                    right: -11%;
+                }
+                @media (min-width:1300px) {
+                    right: -15%;
+                }
+            }
+        }
+        &.dinosaur-genes {
+            .quotebox {
+                position: absolute;
+                bottom: 5%;
+                right: 1%;
+                @media (min-width:360px) {
+                    bottom: 7%;
+                }
+                @media (min-width:411px) {
+                    bottom: 35%;
+                    right: 10%;
+                }
+                @media (min-width:500px) {
+                    bottom: 20%;
+                }
+                @media (min-width:700px) {
+                    bottom: 9%;
+                    right: 15%;
+                }
+                @media (min-width:1300px) {
+                    bottom: 10%;
+                    right: 25%;
+                }
+            }
+            .tape {
+                position: absolute;
+                bottom: 20%;
+                right: 45%;
+                width: 23%;
+                @media (min-width:411px) {
+                    bottom: 47%;
+                    right: 37%;
+                    width: 13%;
+                }
+                @media (min-width:500px) {
+                    bottom: 32%;
+                }
+                @media (min-width:700px) {
+                    bottom: 20%;
+                    right: 35%;
+                    width: 8%;
+                }
+            }
+            .amber {
+                position: absolute;
+                display: none;
+                @media (min-width:411px) {
+                    display: inline-block;
+                    bottom: 0;
+                    left: 8%;
+                    width: 35%;
+                }
+                @media (min-width:700px) {
+                    bottom: -5%;
+                    left: 4%;
+                    width: 30%;
+                }
+            }
+            .malcolm {
+                position: absolute;
+                bottom: 71%;
+                right: 0;
+                width: 45%;
+                @media (min-width:360px) {
+                    bottom: 29%;
+                }
+                @media (min-width:411px) {
+                    bottom: 10%;
+                    right: 8%;
+                }
+                @media (min-width: 500px) {
+                    bottom: 40%; 
+                    width: 35%;
+                }
+                @media (min-width:700px) {
+                    bottom: 30%;
+                }
+                @media (min-width:768px) {
+                    bottom: 40%;
+                    right: 8%;
+                    width: 35%;
+                }
+            }
+        }
+        &.park-tour {
+            .car {
+                position: absolute;
+                bottom: 38%;
+                left: -3%;
+                width: 60%;
+                @media (min-width) {
+                    bottom: 27%;
+                    width: 70%;
+                }
+                @media (min-width:768px) {
+                    bottom: 2%;
+                    left: -10%;
+                }
+                @media (min-width:992px) {
+                    width: 60%;
+                }
+                @media (min-width:1300px) {
+                    width: 70%;
+                }
+            }
+            .nedry {
+                position: absolute;
+                bottom: 40%;
+                right: 0;
+                width: 55%;
+                @media (min-width:411px) {
+                    width: 65%;
+                }
+                @media (min-width:600px) {
+                    width: 55%;
+                }
+                @media (min-width:768px) {
+                    bottom: 38%;
+                    left: 0;
+                    width: 42%;
+                }
+                @media (min-width:1300px) {
+                    bottom: 43%;
+                    left: 16%;
+                }
+            }
+            .meanwhile {
+                position: absolute;
+                bottom: 2rem;
+                right: 0;
+                @media (min-width:768px) {
+                    bottom: 48%;
+                }
+                @media (min-width:992px) {
+                    right: 15%;
+                    bottom: 2rem;
+                }
+                @media (min-width:1300px) {
+                    bottom: 2rem;
+                    right: 0;
+                }
+            }
+        }
+        &.breaking-free {
+            .malcolm {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 112%;
+                z-index: 100;
+                @media (min-width:360px){
+                    width: 125%;
+                    left: -8%;
+                }
+                @media (min-width:411px) {
+                    left: -30%;
+                    width: 130%;
+                }
+                @media (min-width:500px) {
+                    width: 100%;
+                    left: -25%;
+                }
+                @media (min-width:700px) {
+                    width: 85%;
+                }
+                @media (min-width:768px) {
+                    width: 65%;
+                }
+                @media (min-width:992px) {
+                    width: 80%;
+                    left: -38%;
+                }
+                @media (min-width:1300px) {
+                    left: -25%;
+                    width: 65%;
+                }
+            }
+            .trex {
+                position: absolute;
+                display: none;
+                @media (min-width:411px) {
+                    display: inline;
+                    bottom: -10%;
+                    right: -72%;
+                    width: 75%;
+                }
+                @media (min-width:500px) {
+                    right: -42%;
+                    width: 85%;
+                }
+                @media (min-width:600px) {
+                    width: 60%;
+                    right: -35%;
+                }
+                @media (min-width:700px) {
+                    right: -30%;
+                }
+                @media (min-width:768px) {
+                    right: -20%;
+                    width: 50%;
+                }
+            }
+            .tape {
+                position: absolute;
+                bottom: 18%;
+                right: 50%;
+                width: 23%;
+                z-index: 102;
+                @media (min-width:411px){
+                    bottom: 14%;
+                    width: 13%;
+                }
+                @media (min-width:500px) {
+                    bottom: 17%;
+                    right: 35%;
+                }
+                @media (min-width:768px) {
+                    bottom: 20%;
+                    width: 8%;
+                }
+            }
+            .quotebox {
+                position: absolute;
+                bottom: 3%;
+                right: -1%;
+                z-index: 101;
+                @media (min-width:360px) {
+                    bottom: 6%;
+                }
+                @media (min-width:411px) {
+                    right: 20%;
+                }
+                @media (min-width:768px) {
+                    bottom: 10%;
+                    right: 25%;
+                }
+            }
+        }
+        &.natures-way {
+            .tree {
+                position: absolute;
+                display: none;
+                @media (min-width:768px) {
+                    display: inline-block;
+                    bottom: 0;
+                    left: -5%;
+                    width: 50%;
+                    z-index: -100;
+                }
+            }
+            .meanwhile {
+                position: absolute;
+                bottom: 5%;
+                right: -16%;
+                width: 100%;
+                @media (min-width:411px) {
+                    bottom: 40%;
+                }
+                @media (min-width:768px) {
+                    bottom: 2rem;
+                    right: 0;
+                }
+            }
+        }
+        &.power {
+            .spitter {
+                position: absolute;
+                bottom: -3%;
+                left: 20%;
+                width: 55%;
+                @media (min-width:411px) {
+                    left: -8%;
+                }
+                @media (min-width: 600px) {
+                    width: 45%;
+                }
+                @media (min-width:768px) {
+                    left: -10%;
+                    width: 35%;
+                }
+            }
+            .ellie {
+                position: absolute;
+                bottom: 0;
+                left: 38%;
+                width: 65%;
+                @media (min-width:411px) {
+                    left: 10%;
+                }
+                @media (min-width: 600px) {
+                    width: 50%;
+                }
+                @media (min-width:768px) {
+                    left: 6%;
+                    width: 36%;
+                }
+            }
+            .raptor {
+                position: absolute;
+                display: none; 
+                @media (min-width:411px){
+                    display: inline-block;
+                    bottom: 30%;
+                    right: -40%;
+                    width: 60%;
+                }
+                @media (min-width:500px) {
+                    bottom: 0;
+                    right: -20%;
+                }
+                @media (min-width:768px) {
+                    bottom: -15%;
+                    right: -20%;
+                }
+            }
+        }
+        &.last-stand {
+            .raptor2 {
+                position: absolute;
+                display: none;
+                @media (min-width:411px){
+                    display: inline-block;
+                    bottom: 30%;
+                    left: 6%;
+                    width: 30%;
+                }
+                @media (min-width:500px) {
+                    bottom: 0;
+                    left: -14%;
+                }
+                @media (min-width:768px) {
+                    bottom: -25%;
+                }
+            }
+            .raptor3 {
+                position: absolute;
+                display: none;
+                @media (min-width:411px){
+                    display: inline-block;
+                    bottom: 36%;
+                    left: 24%;
+                    width: 23%;
+                }
+                @media (min-width:500px) {
+                    bottom: 8%;
+                    left: 5%;
+                }
+                @media (min-width:768px) {
+                    bottom: 0;
+                }
+            }
+            .banner {
+                position: absolute;
+                bottom: 12%;
+                right: -15%;
+                width: 65%;
+                @media (min-width:768px) {
+                    bottom: 10%;
+                }
+            }
+            .trex {
+                position: absolute;
+                bottom: -5%;
+                right: -10%;
+                width: 95%;
+                @media (min-width:500px) {
+                    width: 85%;
+                }
+                @media (min-width: 700px) {
+                    width: 70%;
+                }
+                @media (min-width:768px) {
+                    bottom: -20%;
+                    width: 65%;
+                }
+                @media (min-width:992px) {
+                    width: 75%;
+                }
+                @media (min-width:1300px) {
+                    width: 65%;
+                }
+            }
+        }
+        &.an-end {
+            .john {
+                position: absolute;
+                bottom: 0;
+                left: 20%;
+                width: 60%;
+                @media (min-width:700px) {
+                    width: 40%;
+                }
+                @media (min-width:1300px) {
+                    width: 30%;
+                }
+            }
+            .helicopter {
+                position: absolute;
+                bottom: 80%;
+                right: -10%;
+                width: 60%;
+                @media (min-width: 700px) {
+                    width: 50%;
+                }
+                @media (min-width:768px) {
+                    bottom: 70%;
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+
+.quotebox {
+    background-color: #FAF7EB;
+    width: 25rem;
+    padding: 1.5rem .25rem .25rem 3rem;
+}
+
+
+.loading-window {
+    position: fixed;
+    padding: 12rem 0;
+    top: 0;
+    left:0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/paper.png');
+}
+.gif {
+    position: fixed;
+    bottom: 20%;
+    width: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (min-width:470px) {
+        width: 35rem;
+    }
+    @media (min-width:1000px) {
+        bottom: 30%;
+    }
+}
+.loaded {
+    display: none;
+}
+
+.spacer {
+    margin: 0;
+    @media (min-width:768px) {
+        margin: 5rem;
+    }
+}
+
+.overlay {
+    background-color: $darkbrown;
+    opacity: 30%;
+    position: fixed;
+    left: 0rem;
+    top: 0rem;
+    margin: 0rem;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 198;
+}
+
+.close-popup {
+    display: block;
+    position: fixed;
+    right: 2rem;
+    top: 3rem;
+    height: 2rem;
+    width: 2rem;
+    z-index: 200;
+    @media (min-width:768px) {
+        height: 3rem;
+        width: 3rem;
+    }
+    .xicon {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.map, .help {
+    h1 {
+        margin-right: 3.25rem;
+        font-size: 2.75rem;
+        @media (min-width:768px) {
+            font-size: 4.57rem;
+        }
+    }
+}
+
+.map {
+    box-shadow: 0px 0px 10px #685549;
+    background-image: url('../images/paper.png');
+    position: fixed;
+    height: 43rem;
+    width: 90%;
+    @media(min-width: 600px) {
+        width: 40rem;
+    }
+    padding: 2rem;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: none;
+    z-index: 199;
+    flex-direction: column;
+    .map-inner {
+        width: 36rem;
+        position: relative;
+        flex-grow: 1;
+        @media(max-width: 599px) {
+            transform: scale(0.7);
+        }
+        @media(max-width: 560px) {
+            transform: scale(0.7) translateX(-15%);
+        }
+        @media(max-width: 490px) {
+            transform: scale(0.7) translateX(-20%);
+        }
+        @media(max-width: 430px) {
+            transform: scale(0.7) translateX(-25%);
+        }
+        @media(max-width: 400px) {
+            transform: scale(0.7) translateX(-35%);
+        }
+        @media(max-width: 350px) {
+            transform: scale(0.6) translateX(-45%);
+        }
+    }
+}
+
+.help {
+    background-image: url('../images/paper.png');
+    box-shadow: 0px 0px 10px #685549;
+    position: fixed;
+    height: 90%;
+    max-height: 40rem;
+    width: 95%;
+    max-width: 60rem;
+    padding: 2rem;
+    @media (min-width:768px) {
+        padding: 3rem;
+    }
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    flex-direction: column;
+    display: none;
+    z-index: 199;
+    .large {
+        font-size: 1rem;
+    }
+    @media (min-width:768px) {
+        .large {
+            font-size: 1.29rem;
+        }
+    }
+    img {
+        max-width: 100%;
+    }
+    .instructions {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0rem;
+        @media (min-width:768px) {
+            padding: 1rem 4rem;  
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .instructions-row {
+        margin-bottom: 2rem;
+    }
+    .arrow {
+        width: 4rem;
+    }
+    .mapimg {
+        width: 9rem;
+    }
+    .numberimg {
+        width: 3rem;
+    }
+    .question {
+        text-align: center;
+        width: 100%;
+        .helpimg {
+            width: 1.5rem;
+            height: auto;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        p {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+}
+
+
+button {
+    position: absolute;
+    color: #ffffff;
+    background-color: $darkbrown;
+    border: none;
+    border-radius: 10rem;
+    box-shadow: 0px 0px 10px $darkbrown;
+    height: 3rem;
+    width: 3rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    outline: none;
+}
+
+button:hover {
+    background-color: $myred;
+    width: auto;
+    padding: 0 1.25rem;
+    z-index: 1000;
+}
+button:active {
+    box-shadow: inset 0px 0px 10px $darkbrown;
+}
+
+.one {
+    right: 6%;
+    bottom: 30%;
+}
+.two {
+    right: 35%;
+    bottom: 46%;
+}
+.three  {
+    left: 31%;
+    bottom: 48%;
+}
+.four {
+    left: 50%;
+    bottom: 81%;
+}
+.five {
+    right: 23%;
+    bottom: 70%;
+}
+.six {
+    right: 38%;
+    bottom: 32%;
+}
+.seven {
+    left: 39%;
+    bottom: 33%;
+}
+.eight  {
+    left: 28%;
+    bottom: 39%;
+}
+.nine {
+    left: 33%;
+    bottom: 10%;
+}
+button .title { display: none; }
+    button:hover .number { display: none; }
+    button:hover .title { display: inline; }

@@ -1,0 +1,214 @@
+#babytext #baby-stroke {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+#babytext.animate #baby-stroke{
+    animation: baby-stroke 5s 1;
+    stroke-dashoffset: 0;
+}
+
+@keyframes baby-stroke {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#debora #debora-arm{
+    transform: rotate(10deg);
+}
+
+#debora.animate #debora-arm{
+    animation: arm-lift 1s 1;
+    transform: rotate(0deg);
+}
+
+@keyframes arm-lift {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+#harlem.shake {
+    animation: harlem .5s infinite;
+}
+@keyframes harlem {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% { 
+        transform: rotate(0);
+    }
+}
+
+#shake.shake {
+    animation: shake .5s infinite;
+}
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% { 
+        transform: rotate(0);
+    }
+}
+
+#feet2.tap #mainfoot{
+    animation: tap .7s infinite;
+
+}
+
+@keyframes tap {
+    0% {
+        transform:  rotate(0deg);
+        
+    }
+    50% {
+        transform: translateY(-8px) translateX(10px) rotate(1deg);
+    }
+
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+#feet2.tap #toe{
+    animation: tap .7s infinite;
+
+}
+
+@keyframes tap {
+    0% {
+        transform:  rotate(0deg);
+        
+    }
+    50% {
+        transform: translateX(5px)
+    }
+
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+
+#feet2.tap #mainfoot2{
+    animation: tap .7s infinite;
+
+}
+
+@keyframes tap {
+    0% {
+        transform:  rotate(0deg);
+        
+    }
+    50% {
+        transform: translateY(-12px) translateX(9px) rotate(1deg);
+    }
+
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+#babyfeet.tap2 #babyfoot1{
+    animation: tap2 .7s infinite;
+
+}
+
+#babyfeet.tap2 #babytoe1{
+    animation: tap2 .7s infinite;
+
+}
+
+#babyfeet.tap2 #babyfoot2 {
+    animation: tap2 .7s infinite;
+}
+
+#babyfeet.tap2 #babytoe2 {
+    animation: tap3 .7s infinite;
+}
+
+
+@keyframes tap2 {
+    0% {
+        transform:  rotate(0deg);
+        
+    }
+    50% {
+        transform: rotate(-3deg) translateY(18px) translateX(-8px);
+    }
+
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+
+@keyframes tap3 {
+    0% {
+        transform:  rotate(0deg);
+        
+    }
+    50% {
+        transform: rotate(1deg) translateY(3px) translateX(14px);
+    }
+
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+#police.siren #lights {
+    animation: siren .9s infinite;
+}
+
+
+@keyframes siren {
+    0% {
+        opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+
+
+
+#endtext #stroke {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+#endtext.animate #stroke{
+    animation: end-stroke 3s 1;
+    stroke-dashoffset: 0;
+}
+
+@keyframes end-stroke {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}

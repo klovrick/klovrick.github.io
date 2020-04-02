@@ -1,0 +1,97 @@
+.overlay {
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    position: fixed;
+    z-index: 998;
+    width: 100vw;
+    height: 100vh;
+    &.open {
+        display: block;
+    }
+}
+.menu-popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 90vw;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.open {
+        display: flex;
+    }
+    .menu-contents {
+        background-color: #8CACC2;
+        position: relative;
+        width: 100%;
+    }
+    .d path {
+        fill: $para;
+        transition: all 0.5s;
+    }
+    a:hover {
+        .d path {
+            fill: $red;
+        }
+        .d {
+            transform: rotate(10deg);
+        }
+    }
+    .one {
+        display: block;
+        position: absolute;
+        width: 30%;
+        left: 1rem;
+        top: -3rem;
+    }
+    .two {
+        display: block;
+        position: absolute;
+        width: 20%;
+        top: 2.5rem;
+        left: 17rem;
+    }
+    .three {
+        display: block;
+        position: absolute;
+        width: 25%;
+        top: 6.56rem;
+        left: 38rem;
+    }
+    .four {
+        display: block;
+        position: absolute;
+        width: 42%;
+        top: 2.5rem;
+        right: 1.71rem;
+    }
+    .five {
+        display: block;
+        position: absolute;
+        width: 25%;
+        bottom: 7.29rem;
+        left: .3rem;
+    }
+    .six {
+        display: block;
+        position: absolute;
+        width: 33%;
+        bottom: 1.1rem;
+        left: 18rem;
+    }
+    .seven {
+        display: block;
+        position: absolute;
+        width: 25%;
+        bottom: 5.62rem;
+        left: 44rem;
+    }
+    .eight {
+        display: block;
+        position: absolute;
+        width: 25%;
+        bottom: 4rem;
+        right: 1rem;
+    }
+}

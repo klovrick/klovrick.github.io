@@ -1,0 +1,245 @@
+* {box-sizing: border-box;}
+
+@import 'flexboxgrid';
+@import 'variables';
+@import 'typography';
+@import 'menu';
+@import 'homepage';
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: $back;
+    display: inline-flex;
+    font-size: 16px;
+    overflow-y: hidden;
+    .menu {
+        display: flex;
+        position: fixed;
+        margin-left: 1.6875rem;
+        z-index: 997;
+        cursor: pointer;
+    }
+    .menu:hover {
+        color: $red;
+        transform: scale(1.05);
+    }
+}
+
+.section {
+    min-width: 1500px;
+    height: 100vh;
+    display: block;
+    position: relative;
+
+    .content {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    &.amber {
+        .fern-one {
+            position: absolute;
+            bottom: -7.825rem;
+            left: 0rem;
+            width: 23%;
+        }
+        .rap-one {
+            position: absolute;
+            bottom: 1.6rem;
+            width: 25%;
+        }
+        .amber {
+            position: absolute;
+            max-width: 28rem;
+            right: 3.6rem;
+            bottom: 6.25rem;
+            width: 50%;
+        }
+        .leaves-one {
+            position: absolute;
+            top: -2.75;
+            left: 63rem;
+            width: 42%;
+            animation: leaf-animation 10s infinite;
+        }
+        .content {
+            margin-right: 10rem;
+        }
+    }
+    &.cream {
+        .ln-one {
+            position: absolute;
+            left: 5.5rem;
+            width: 33%;
+            bottom: 1.53rem;
+        }
+        .shave-cream {
+            position: absolute;
+            top: 1.5rem;
+            width: 75%;
+            right: 5.54rem;
+            height: 100vh;
+        }
+        .vines-one {
+            position: absolute;
+            width: 10%;
+            right: .75rem;
+            top: -3.375rem;
+            animation: leaf-animation 4s infinite;
+        }
+        .content {
+            position: relative;
+            transform: translateX(-4rem)translateY(-2rem);
+        }
+    }
+    &.group {
+        .group-dinos {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            height: 100vh;
+        }
+        .content {
+            margin-left: 9rem;
+        }
+    }
+    &.sick {
+        .sickdino {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            height: 60%;
+            right: 10rem;
+            margin-bottom: 2rem;
+        }
+        .trees {
+            position: absolute;
+            width: 100%; 
+            height: 101%;
+            right: -60%;
+        }
+        .content {
+            margin-top: 13rem;
+            right: 15rem;
+        }
+    }
+    &.storm {
+        background-color: #8CACC2;
+        .content {
+            margin-top: 4rem;
+            padding-right: 20rem;
+        }
+        .trees {
+            position: absolute;
+            height: 101vh;
+            left: -50%;
+        }
+        .fern-two {
+            position: absolute;
+            z-index: 998;
+            right: 0;
+            bottom: 0;
+            animation: fern-animation 8s infinite;
+        }
+    }
+    &.stormtwo {
+        background-color: #8CACC2;
+        width: 1200px;
+        .roar {
+            position: absolute;
+            height: 100vh;
+            left: -95%;
+            max-width: 150%;
+        }
+        .trees {
+            position: absolute;
+            right: -40%;
+            height: 100vh;
+        }
+        .content {
+            position: absolute;
+            height: auto;
+            left: 15rem;
+            bottom: 5rem;
+        }
+        .rain {
+            position: absolute;
+            top: -10%;
+            width: 80%;
+        }
+    }
+    &.egg {
+        .egg-one {
+            position: absolute;
+            width: 25%;
+            left: 14rem;
+            top: 9.8rem;
+        }
+        .egg-two {
+            position: absolute;
+            width: 33%;
+            right: .2rem;
+            top: 18.25rem;
+        }
+        .content {
+            margin-left: 10rem;
+        }
+    }
+    &.final {
+        .leaves-three {
+            position: absolute;
+            width: 33%;
+            left: 2.3rem;
+            top: -4.2rem;
+            animation: leaf-animation 7s infinite;
+        }
+        .raptors {
+            position: absolute;
+            width: 40%;
+            left: 10rem;
+            bottom: -2.68rem;
+        }
+        .content {
+            padding-top: 10rem;
+            padding-left: 30rem;
+        }
+    }
+    &.last {
+        .trex-end {
+            position: relative;
+            height: 100vh;
+            left: -40%;
+            bottom: 0;
+        }
+    }
+    &.replay {
+        .heli {
+            position: absolute;
+            left: -10%;
+            top: 2rem;
+        }
+        .full {
+            position: absolute;
+            width: 30%;
+            top: 40%;
+            left: 25%;
+            fill: $para;
+        }
+        .full:hover {
+            fill: $red;
+            transform: rotate(10deg);
+        }
+    }
+}
+@keyframes leaf-animation {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    50% { transform: rotate(5deg) translate(-10px, -10px); }
+    100% { transform: rotate(0deg) translate(0px, 0px); }
+}
+@keyframes fern-animation {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}

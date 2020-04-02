@@ -1,0 +1,522 @@
+@import 'flexboxgrid';
+@import 'animations';
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Montserrat, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 30%;
+}
+
+section {
+    padding: 3em; 
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+
+.mute {
+    position: fixed;
+    top: 1rem;
+    right: 1.125rem;
+    z-index: 999;
+}
+
+.music-popup {
+    padding: 0.5rem;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    color: black;
+    position: fixed;
+    top: 4.5rem;
+    right: 1.125rem;
+    z-index: 999;
+    font-size: 0.875rem;
+    animation: pulse 0.5s infinite;
+    &:before {
+        content: " ";
+        position: fixed;
+        right: 1rem;
+        top: -0.5rem;
+        border-top: none;
+        border-right: 0.5rem solid transparent;
+        border-left: 0.5rem solid transparent;
+        border-bottom: 0.5rem solid white;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.title {
+    position: relative;
+    background-color: #424242;
+
+    #cassette {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #titletext {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 12rem;
+    }
+
+    #scroll {
+        position: absolute;
+        z-index: 300;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 4rem;
+    }
+
+    #subtitle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 9.75rem;
+    }
+
+}
+
+/*BellBottoms*/
+.bellbottoms{
+    background-color: #E18D39;
+    position: relative;
+    .people-wrapper {
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-content: flex-end;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    #people {
+        align-items: center;
+        display: flex;
+        z-index: 30;
+        width: 80%;
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+    }
+
+    #bellbottoms1{
+        margin-top: -60px;
+        margin-left: -70px;
+    }
+    
+    #bellbottoms2{
+        width: 100%;
+        margin-left:20px ;
+    }
+    
+    #bellbottoms3{
+        margin-left: 500px;
+    }
+    
+}
+
+.harlemshake{
+    background-color: #E46B34;
+    position: relative;
+
+    #coffeecups{
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        z-index: 30;
+        width: 700px;
+    }
+    
+    #harlem{
+        position: absolute;
+        top: -5rem;
+        left: -2rem;
+        width: 689px;
+    }
+
+    #shake {
+        position: absolute;
+        bottom: -5rem;
+        right: -2rem;
+        width: 640px;
+    }
+}
+
+.baby {
+    background-color: #91D5C9;
+    position: relative;
+
+    #baby {
+        position: absolute;
+        right: 0rem;
+        bottom: -.5rem;
+        z-index: 3;
+    }
+
+    #debora {
+        position: absolute;
+        left: 0rem;
+        right: auto;
+        @media (min-width: 1150px) {
+            left: auto;
+            right: 50rem;
+        }
+        bottom: 0rem;
+        z-index: 3;
+        width: 440px;
+    }
+
+    #babytext {
+        position: absolute;
+        top: 5rem;
+        right: 20rem;
+        width: 440px;
+        max-width: 100%;
+    }
+
+    #stripe {
+        position: absolute;
+        top: 20rem;
+        width: 105%;
+        right: 0rem;
+    }
+
+}
+
+
+.neat {
+    background-color: #B23F55;
+    position: relative;
+    z-index: 2;
+
+    #man1 {
+        position: absolute;
+        bottom: 0rem;
+        right: 60rem;
+
+    }
+
+    #man2 {
+        position: absolute;
+        bottom: 0rem;
+        right: 35rem;
+        z-index: 2;
+    }
+
+    #man3 {
+        position: absolute;
+        bottom: 0rem;
+        right: 18rem;
+    }
+
+    #neat1 {
+        position: absolute;
+        left: 0rem;
+        @media (min-width: 960px) {
+            left: 3rem;
+        }
+        @media (min-width: 1400px) {
+            left: 5rem;
+        }
+        @media (min-width: 1600px) {
+            left: 6rem;
+        }
+        width: -10%;
+        top: 7rem;
+    }
+
+
+    #neat2 {
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    #neat3 {
+        position: absolute;
+        right: 0rem;
+        @media (min-width: 960px) {
+            right: 3rem;
+        }
+        @media (min-width: 1400px) {
+            right: 5rem;
+        }
+        @media (min-width: 1600px) {
+            right: 6rem;
+        }
+        top: 7rem;
+    }
+}
+
+.debora {
+    background-color: #4768BA;
+    position: relative;
+    z-index: 3;
+
+    #deboratext {
+        position: absolute;
+        bottom: 1rem;
+        right: 12rem;
+        width: 70%;
+        z-index: 3;
+    }
+
+    #babyfeet{
+        position: absolute;
+        top: 0rem;
+        left: -2rem;
+        width: 55%;
+        z-index: 1;
+    }
+
+    #feet2 {
+        position: absolute;
+        top: 0rem;
+        width: 75%;
+        right: -9rem;
+    }
+
+}
+
+.tequilla {
+    background-color: #C287C1;
+    position: relative;
+
+    #deadguy{
+        position: absolute;
+        top: 13rem;
+        right: 35rem;
+        width: 75%
+    }
+
+    #tequilla1{
+        position: absolute;
+        top: 0rem;
+        right: 8rem;
+    }
+    #tequilla2{
+        position: absolute;
+        top: 20rem;
+        right: 10rem;
+    }
+    #tequilla3{
+        position: absolute;
+        top: 25rem;
+        right: 20rem;
+    }
+}
+
+.nggyu {
+    background-color: #CE395A;
+    position: relative;
+
+    #nevergonna {
+        position: absolute;
+        top: 1rem;
+        left: -1rem;
+    }
+
+    #giveyouup {
+        position: absolute;
+        right: -1rem;
+        top: 8.5rem;
+    }
+
+    #deboraNGGYU {
+        position: absolute;
+        bottom: 0rem;
+        right: 35rem;
+    }
+
+    #jonham {
+        position: absolute;
+        bottom: 0rem;
+        left: 0rem;
+        width: 35%;
+    }
+
+    #babyNGGYU {
+        position: absolute;
+        bottom: 0rem;
+        right: 0rem;
+        width: 30%;
+        z-index: 2;
+    }
+}
+
+.brightonrock {
+    background-color: #201429;
+    z-index: 3;
+    position: relative;
+    #bottom {
+        bottom: 0rem;
+        left: 0rem;
+       width: 100%;
+        position: absolute;
+    }
+
+    #brighton {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 0;
+    }
+
+    #rock {
+        position: absolute;
+        z-index: 4;
+        bottom: 0;
+        right: 14rem;
+    }
+
+    #car {
+        position: absolute;
+        right: 70rem;
+        top: 27rem;
+    }
+
+    #police {
+        position: absolute;
+        right: 25rem;
+        top: 12rem;
+        width: 660px;
+    }
+}
+
+.easy { 
+    position: relative;
+
+    #forest{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+    }
+
+    #road {
+        position: absolute;
+        z-index: 1;
+        width: 27%;
+        top: 0;
+        left: 28.5rem;
+    }
+
+    #easycar {
+        position: absolute;
+        z-index: 2;
+        left: 37rem;
+        width: 9%;
+        top: 30rem;
+
+    }
+
+    #easytext { 
+        position: absolute;
+        z-index: 50;
+        width: 100%;
+        left: 0;
+    }
+
+}
+
+.babydriver {
+    position: relative;
+    z-index: 5;
+    background-color: #FFD13C;
+
+    #babydrivertext {
+        position: absolute;
+        width: 90rem;
+        left: .5rem;
+        top: 1rem;
+    }
+
+    #rainbow { 
+        position: absolute;
+        left: -5rem;
+        top: -4rem;
+        width: 70rem;
+    }
+
+    #babybd {
+        z-index: 7;
+        width: 300px;
+        position: absolute;
+        bottom: -5px;
+        right: 7rem;
+    }
+
+    #deborabd { 
+        z-index: 6;
+        width: 1100px;
+        position: absolute;
+        bottom: 5rem;
+        right: 15rem;
+    }
+}
+
+.end {
+    position: relative;
+    background-color: #424242;
+
+    #end{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #restartbutton { 
+        position: absolute;
+        width: 55px;
+        left: 36rem;
+        bottom: 6.5rem;
+    }
+
+    #restartbutton:hover { 
+        width: 59px;
+    }
+
+    #endtext { 
+        position: absolute;
+        z-index: 300;
+        top: 17rem;
+        left: .2rem;
+    }
+}
+
+
+.timeline {
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    bottom: 2rem;
+    left: 0rem;
+    border-top: 4px solid white;
+}

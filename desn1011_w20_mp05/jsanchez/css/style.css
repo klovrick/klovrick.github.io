@@ -1,0 +1,1259 @@
+@import 'flexboxgrid';
+
+* {box-sizing: border-box;}
+
+html {
+    overflow-y: hidden;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    background: linear-gradient(89.44deg, #FA92AA 28.75%, #FAEB9D 138.94%);
+}
+
+h1 {
+    font: normal 900 60px/90% "dogma-bold", sans-serif;
+    letter-spacing: 0.045em;
+    color: #FDEC91;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h3 {
+    color: white;
+    font: normal 700 0.75rem/1rem 'Avenir', sans-serif;
+    letter-spacing: 2px;
+}
+
+h4 {
+    color: #D86B8C;
+    font: normal 300 0.875rem/1.25rem 'Avenir', sans-serif;
+}
+
+h5 {
+    font: normal 700 0.875rem/1.25rem 'Avenir', sans-serif;
+}
+
+h6 {
+    color: #D86B8C;
+    font: normal 2.75rem 'Permanent Marker', cursive;
+    text-transform: uppercase;
+}
+
+p {
+    color: white;
+    font: normal 300 0.875rem/1.25rem 'Avenir', sans-serif;
+}
+
+.blue-flag {
+    height: 0.80rem;
+    background-color: #B8DBDD;
+    position: absolute;
+    left: 105px;
+    top: 0;
+}
+    .part .blue-flag-sm {
+        width: 23rem;
+    }
+    .part .blue-flag-lg {
+        width: 27rem;
+    }
+
+.yellow-flag {
+    width: 0.4375rem;
+    height: 100vh;
+    background-color: #FAEB9D;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+.ribbon {
+    position: absolute;
+    left: 65px;
+    top: 0px;
+}
+
+.padding {
+    padding: 0 2rem;
+}
+
+.part {
+    height: 100vh;
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+.part-sm {
+    width: 450px;
+}
+.part-med {
+    width: 1200px;
+}
+.part-lg {
+    width: 1500px;
+}
+
+.desc {
+    color: white;
+    font: normal 400 0.8rem/1.2rem 'Avenir', sans-serif;
+    letter-spacing: 0.03rem;
+    width: 21rem;
+}
+
+.home-page .title {
+    margin-top: 5rem;
+    width: 24.5rem;
+}
+
+.intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.event-string {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.event-tag {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.section {
+    position: absolute;
+    top: 7rem;
+    z-index: 1; 
+    left: 0px;
+}
+.section-top-move {
+    top: 12rem;
+}
+
+.section-end {
+    top: 12rem;
+    left: 0;
+}
+
+.section:hover {
+    transform:scale(1.1,1.1);
+}
+
+.section-end:hover {
+    filter: drop-shadow(0 0 10rem rgb(255, 255, 255));
+    transition: all 100ms ease-out;
+}
+.section-end-img {
+    left: 0;
+    top: 6rem;
+    position: absolute;
+}
+    
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    height: 137px;
+    background-color: #B8DBDD;
+}
+
+.button {
+    position: relative;
+    z-index: 5;
+    top: -1.5rem;
+}
+.button:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+.popup-section {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(91.7deg, #E27C93 2.72%, #FAEB9D 130.56%);
+}
+
+.popup-footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+.popup-section .contents {
+    background-size: cover;
+}
+.popup-section-one .contents {
+    background-image: url('../images/section-1/bg-1.png');
+}
+.popup-section-two .contents {
+    background-image: url('../images/section-2/bg-2.png');
+}
+.popup-section-three .contents {
+    background-image: url('../images/section-3/bg-3.png');
+}
+.popup-section-four .contents {
+    background-image: url('../images/section-4/bg-4.png');
+}
+.popup-section-five .contents {
+    background-image: url('../images/section-5/bg-5.png');
+}
+.popup-section-six .contents {
+    background-image: url('../images/section-6/bg-6.png');
+}
+.popup-section-seven .contents {
+    background-image: url('../images/section-7/bg-7.png');
+}
+.popup-section-eight .contents {
+    background-image: url('../images/section-8/bg-8.png');
+}
+.popup-section-nine .contents {
+    background-image: url('../images/section-9/bg-9.png');
+}
+.popup-section-ten .contents {
+    background-image: url('../images/section-10/bg-10.png');
+}
+.popup-section-eleven .contents {
+    background-image: url('../images/section-11/bg-11.svg');
+}
+.popup-section-twelve .contents {
+    background-image: url('../images/section-12/bg-12.svg');
+}
+.popup-section-thirteen .contents {
+    background-image: url('../images/section-13/bg-13.svg');
+}
+
+.popup-section .title-container {
+    height: 7.25rem;
+    position: relative;
+}
+.popup-section .title {
+    margin-top: 0;
+    width: auto;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    z-index: 2;
+}
+.popup-section .title-long {
+    width: 45rem;
+}
+.popup-section .title-center {
+    position: absolute;
+    text-align: center;
+    margin-top: 1.5rem;
+    width: 100%;
+    left: 0;
+}
+
+.popup-section .block-title {
+    width: 4.667%;
+    height: 7.25rem;
+    background-color: #B8DBDD;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.popup-section .block-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-section .blue {
+    background-color: #B8DBDD;
+    height: 7.25rem;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.flex-grow {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-grow .grow {
+    flex-grow: 1;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+.padding-32 {
+    padding: 32px;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+  }
+::-webkit-scrollbar-track {
+background: #FAEB9D; 
+}
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: #D86B8C; 
+}
+::-webkit-scrollbar-thumb:hover {
+background: rgb(221, 127, 155); 
+}
+
+
+/* POPUPS --------------------------------------------------------------------------------------------------*/
+
+.overlay {
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.note-text {
+    position: absolute;
+}
+
+.note-group {
+    position: absolute;
+    z-index: 5;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    z-index: 4;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-section .close-popup {
+    display: block;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.75rem;
+    z-index: 5;
+}
+.close-popup .exit {
+    width: 100%;
+    height: auto;
+}
+
+.slug {
+    text-transform: uppercase;
+    z-index: 6;
+}
+
+.slug-two {
+    color: white;
+}
+
+.slug-pink {
+    color: #D86B8C;
+}
+
+.popup-section .border {
+    width: 46.97rem;
+    height: 7.7rem;
+    position: absolute;
+    right: 0;
+    background: #B8DBDD;
+}
+
+.popup-section .border-top-full {
+    top: 0;
+    width: 100%;
+}
+
+.popup-section .border-bottom-full {
+    bottom: 0;
+    width: 100%;
+}
+
+.popup-section .bg {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.popup-section .bg-one {
+    left: 0;
+}
+
+/* Section ONE ----------------------------------------------------------------------------------------------------------------*/
+
+.popup-section-one .note-group {
+    position: absolute;
+    z-index: 3;
+}
+
+.popup-section-one .note-group-one {
+    bottom: 13.75rem;
+    left: 4rem;
+}
+
+.popup-section-one .note-one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+}
+
+.popup-section-one .note-text-one {
+    transform: rotate(-8.57deg);
+    width: 16rem;
+    left: 1.5rem;
+    top: 2rem;
+}
+
+.popup-section-one .note-group-two {
+    top: 80%;
+    right: -6.5rem;
+}
+
+.popup-section-one .note-text-two {
+    transform: rotate(4.37deg);
+    width: 14.8125rem;
+    left: 2rem;
+    top: 1rem;
+}
+
+.popup-section-one .image-one {
+    top: -14%;
+    z-index: 5;
+}
+
+.popup-section-one .image-two {
+    top: 35%;
+    left: -2rem;
+}
+
+.popup-section-one .image-three {
+    top: 25%;
+    left: 12rem;
+}
+
+/* Section TWO ----------------------------------------------------------------------------------------------------------------*/
+
+.popup-section-two .note-group-one {
+    bottom: 7rem;
+    left: 14rem;
+}
+
+.popup-section-two .note-one {
+    position: absolute;
+    bottom: 9rem;
+}
+
+.popup-section-two .note-text-one {
+    transform: rotate(-13deg);
+    width: 8.9375rem;
+    height: 5.4375rem;
+    bottom: 9.5rem;
+    left: 2rem;
+}
+
+.popup-section-two .note-group-two {
+    bottom: -10rem;
+    right: .5rem;
+}
+
+.popup-section-two .note-two {
+    position: absolute;
+    bottom: 5rem;
+    right: -4rem;
+}
+
+.popup-section-two .note-text-two {
+    transform: rotate(-12deg);
+    width: 7.625rem;
+    bottom: 6rem;
+    right: -2.5rem;
+}
+
+.popup-section-two .image-one {
+    bottom: 1.25rem;
+    left: 0;
+}
+
+.popup-section-two .image-two {
+    top: 48%;
+    left: 20%;
+}
+
+.popup-section-two .image-three {
+    top: 55%;
+    left: 38%;
+}
+
+.popup-section-two .image-four {
+    top: 55%;
+    left: -30%;
+}
+
+.popup-section-two .image-five {
+    top: -15%;
+    right: -2%;
+}
+
+/* Section THREE  ----------------------------------------------------------------------------------------------------------------*/
+
+
+.popup-section-three .note-group-one {
+    bottom: 18rem;
+    left: 2.5625rem;
+}
+
+.popup-section-three .note-text-one {
+    transform: rotate(-2.2deg);
+    width: 10rem;
+    left: 2rem;
+    bottom: 1rem;
+}
+
+.popup-section-three .note-group-two {
+    bottom: 14rem;
+    left: 4rem;
+}
+
+.popup-section-three .note-text-two {
+    transform: rotate(-2.4deg);
+    left: 1.5rem;
+    bottom: .5rem;
+}
+
+.popup-section-three .note-group-three {
+    bottom: 10rem;
+    left: 6.75rem;
+}
+
+.popup-section-three .note-text-three {
+    transform: rotate(2.67deg);
+    left: 1.5rem;
+    bottom: .5rem;
+}
+
+.popup-section-three .note-group-four {
+    bottom: 6rem;
+    left: 1.375rem;
+}
+
+.popup-section-three .note-text-four {
+    transform: rotate(-5.98deg);
+    left: 2rem;
+    bottom: .9rem;
+}
+
+.popup-section-three .note-group-five {
+    bottom: 3rem;
+    left: 7.625rem;
+}
+
+.popup-section-three .note-text-five {
+    transform: rotate(0.89deg);
+    left: 2rem;
+    bottom: .5rem;
+}
+
+.popup-section-three .note-group-six {
+    top: 90%;
+    left: 2rem;
+}
+
+.popup-section-three .note-text-six {
+    left: 1.5rem;
+    bottom: .5rem;
+    width: 12.3125rem;
+}
+
+.popup-section-three .note-group-seven {
+    top: 20%;
+    left: 8rem;
+}
+
+.popup-section-three .note-text-seven {
+    left: 1.5rem;
+    bottom: .5rem;
+    width: 12.3125rem;
+}
+
+.popup-section-three .image-one {
+    top: 60%;
+    left: -8rem
+}
+
+.popup-section-three .image-two {
+    top: -30%;
+}
+
+.popup-section-three .image-three {
+    bottom: 2rem;
+    left: 14rem; 
+    width: 80%;
+    z-index: 6;
+}
+
+/* Section FOUR  ----------------------------------------------------------------------------------------------------------------*/
+
+.popup-section-four .note-group-one {
+    bottom: 13.455rem;
+    left: 3rem;
+}
+
+.popup-section-four .note-text-one {
+    transform: rotate(8.21deg);
+    left: 2rem;
+    bottom: 2rem;
+    width: 14rem;
+}
+
+.popup-section-four .note-group-two {
+    bottom: 6.755625rem;
+    left: 7rem;
+}
+
+.popup-section-four .note-text-two {
+    transform: rotate(-10.5deg);
+    width: 14rem;
+    left: 2rem;
+    bottom: 2.5rem;
+}
+
+.popup-section-four .note-group-three {
+    top: 80%;
+    right: 15%;
+}
+
+.popup-section-four .note-text-three {
+    transform: rotate(-10.5deg);
+    width: 14rem;
+    left: 1.8rem;
+    bottom: -3.3rem;
+}
+
+
+.popup-section-four .image-one {
+    top: 0%;
+    left: -13rem;
+    z-index: 1;
+}
+
+.popup-section-four .image-two {
+    top: 55%;
+    right: 15%;
+    z-index: 6;
+}
+
+.popup-section-four .image-three {
+    top: 0%;
+    right: 15%;
+    z-index: 6;
+}
+
+/* Section FIVE  ----------------------------------------------------------------------------------------------------------------*/
+
+.popup-section-five .note-group-one {
+    bottom: 2rem;
+    left: 6rem;
+}
+
+.popup-section-five .note-text-one {
+    transform: rotate(-8.57deg);
+    left: 2rem;
+    bottom: 1.5rem;
+    width: 11rem;
+}
+
+.popup-section-five .note-group-two {
+    bottom: 5rem;
+}
+
+.popup-section-five .note-text-two {
+    left: 1.5rem;
+    bottom: 0.3rem;
+    width: 10.9375rem;
+}
+
+.popup-section-five .note-group-three {
+    bottom: 10rem;
+}
+
+.popup-section-five .note-text-three {
+    left: .7rem;
+    bottom: -.1rem;
+    width: 10.9375rem;
+}
+
+.popup-section-five .note-group-four {
+    bottom: 5.5rem;
+}
+
+.popup-section-five .note-text-four {
+    left: 1rem;
+    bottom: -.1rem;
+    width: 10.9375rem;
+}
+
+.popup-section-five .image-one {
+    top: 45%;
+    left: 4rem;
+}
+
+.popup-section-five .image-three {
+    bottom: 10rem;
+}
+
+.popup-section-five .image-four {
+    bottom: 14rem;
+}
+
+.popup-section-five .image-five {
+    bottom: 10rem;
+}
+
+.popup-section-five .image-six {
+    bottom: 10.5rem;
+    left: 5rem;
+    z-index: 7;
+    transform: rotate(60deg);
+}
+
+.popup-section-five .image-seven {
+    left: 14rem;
+    bottom: 15rem;
+    z-index: 8;
+}
+
+/* Section SIX  ----------------------------------------------------------------------------------------------------------------*/
+
+
+.popup-section-six .note-group-one {
+    bottom: 17.614375rem;
+    left: 13rem;
+}
+
+.popup-section-six .note-text-one {
+    transform: rotate(4deg);
+    left: 1.5rem;
+    bottom: .5rem;
+}
+
+.popup-section-six .note-group-two {
+    bottom: 14.234375rem;
+    left: 14rem;
+}
+
+.popup-section-six .note-text-two {
+    transform: rotate(-4.5deg);
+    left: 1.5rem;
+    bottom: .5rem;
+    width: 11rem;
+}
+
+.popup-section-six .note-group-three {
+    bottom: 9.298125rem;
+    left: 15rem;
+}
+
+.popup-section-six .note-text-three {
+    transform: rotate(-4deg);
+    left: 1.5rem;
+    bottom: .5rem;
+    width: 11rem;
+}
+
+.popup-section-six .note-group-four {
+    bottom: 4.65rem;
+    left: 15rem;
+}
+
+.popup-section-six .note-text-four {
+    transform: rotate(2deg);
+    left: 1.5rem;
+    bottom: .2rem;
+    width: 11rem;
+}
+
+.popup-section-six .image-one {
+    top: -16%;
+    left: -18rem;
+    z-index: 1;
+}
+
+.popup-section-six .image-two {
+    top: 53%;
+    left: -1rem;
+}
+
+.popup-section-six .image-three {
+    top: 53%;
+    left: 10rem;
+}
+
+.popup-section-six .image-four {
+    bottom: 13.4rem;
+    left: 20rem;
+}
+
+.popup-section-six .image-five {
+    bottom: 8.5rem;
+    left: 20rem;
+}
+
+.popup-section-six .image-six {
+    top: 70%;
+    left: 8.3rem;
+}
+
+/* Section SEVEN  ----------------------------------------------------------------------------------------------------------------*/
+
+
+.popup-section-seven .note-group-one {
+    bottom: 3rem;
+}
+
+.popup-section-seven .note-text-one {
+    transform: rotate(2.35deg);
+    left: 1rem;
+    bottom: -4.6rem;
+    width: 15rem;
+}
+
+.popup-section-seven .image-one {
+    max-width: 100%;
+    bottom: 9rem;
+}
+
+.popup-section-seven .image-two {
+    bottom: 6rem;
+}
+
+/* Section EIGHT  ----------------------------------------------------------------------------------------------------------------*/
+
+
+.popup-section-eight .note-group-one {
+    top: 35%;
+    left: 10rem;
+    z-index: 1;
+}
+
+.popup-section-eight .note-text-one {
+    left: 2rem;
+    bottom: .2rem;
+    width: 11.4375rem;
+}
+
+.popup-section-eight .note-group-two {
+    top: 70%;
+    left: 10rem;
+    z-index: 1;
+}
+
+.popup-section-eight .note-text-two {
+    left: 2rem;
+    bottom: .7rem;
+    width: 11.4375rem;
+}
+
+.popup-section-eight .note-group-three {
+    top: 50%;
+}
+
+.popup-section-eight .note-text-three {
+    transform: rotate(9.5deg);
+    left: 3rem;
+    bottom: 2rem;
+    width: 10rem;
+}
+
+.popup-section-eight .image-one {
+   top: 30%;
+   left: 2rem;
+}
+
+.popup-section-eight .image-two {
+   top: 65%;
+   left: 2.5rem;
+}
+
+.popup-section-eight .image-three {
+    top: 15%;
+}
+
+.popup-section-eight .image-four {
+    top: -15%;
+    left: 5rem;
+}
+
+.popup-section-eight .image-five {
+    top: 55%;
+    left: -2.5rem;
+}
+
+/* Section NINE  ----------------------------------------------------------------------------------------------------------------*/
+
+.popup-section-nine .note-group-one {
+    top: 75%;
+    left: 3rem;
+}
+
+.popup-section-nine .note-text-one {
+    font-size: 1.5rem;
+    transform: rotate(5.02deg);
+    left: 2rem;
+    bottom: -1.8rem;
+    width: 14.8rem;
+    text-align: center;
+}
+
+.popup-section-nine .note-group-two {
+    top: 45%;
+    left: -14rem;
+    z-index: 1;
+}
+
+.popup-section-nine .note-text-two {
+    transform: rotate(-10deg);
+    left: 3rem;
+    bottom: 3rem;
+    width: 10rem;
+}
+
+.popup-section-nine .note-group-three {
+    top: 25%;
+}
+
+.popup-section-nine .note-text-three {
+    left: 1.5rem;
+    bottom: 0rem;
+    width: 10rem;
+}
+
+.popup-section-nine .note-group-four {
+    top: 40%;
+    right: 3.7rem;
+}
+
+.popup-section-nine .note-text-four {
+    left: 1.5rem;
+    bottom: 0rem;
+    width: 10rem;
+}
+
+.popup-section-nine .note-group-five {
+    top: 55%;
+    right: 3.7rem;
+}
+
+.popup-section-nine .note-text-five {
+    text-align: center;
+    left: 1.5rem;
+    bottom: 0rem;
+    width: 10rem;
+}
+
+.popup-section-nine .note-group-six {
+    top: 75%;
+    right: 3.7rem;
+}
+
+.popup-section-nine .note-text-six {
+    text-align: center;
+    left: 1.5rem;
+    bottom: 0rem;
+    width: 10rem;
+}
+
+.popup-section-nine .note-group-seven {
+    top: 90%;
+    right: 3.7rem;
+}
+
+.popup-section-nine .note-text-seven {
+    text-align: center;
+    left: 1.5rem;
+    bottom: 0rem;
+    width: 10rem;
+}
+
+.popup-section-nine .image-one {
+    top: 65%;
+    left: 22rem;
+}
+
+.popup-section-nine .image-two {
+    top: 40%;
+    left: -18rem;
+}
+
+.popup-section-nine .image-three {
+    top: 20%;
+    left: -5rem;
+}
+
+.popup-section-nine .image-four {
+    top: -25%;
+    left: 8rem;
+}
+
+.popup-section-nine .image-five {
+    top: 95%;
+    left: -18rem;
+}
+
+.popup-section-nine .image-six {
+    top: 85%;
+    left: -2.5rem;
+}
+
+/* Section TEN  ----------------------------------------------------------------------------------------------------------------*/
+
+.popup-section-ten .note-group-one {
+    bottom: 3rem;
+}
+
+.popup-section-ten .note-text-one {
+    font-size: 1.5rem;
+    transform: rotate(2.35deg);
+    left: 1.5rem;
+    bottom: -1rem;
+    width: 15rem;
+}
+
+.popup-section-ten .image-one {
+    bottom: 9rem;
+}
+
+.popup-section-ten .image-two {
+    bottom: 6rem;
+}
+
+/* Section ELEVEN  ----------------------------------------------------------------------------------------------------------------*/
+
+
+.popup-section-eleven .note-group-one {
+    top: 55%;
+    left: 5rem;
+    z-index: 1;
+}
+
+.popup-section-eleven .note-text-one {
+    transform: rotate(-10deg);
+    left: 2.3rem;
+    bottom: 2rem;
+    width: 11.125rem;
+}
+
+.popup-section-eleven .note-group-two {
+    top: 95%;
+    left: -5rem;
+}
+
+.popup-section-eleven .note-text-two {
+    left: 1.5rem;
+    bottom: 0rem;
+    width: 11.25rem;
+}
+
+.popup-section-eleven .note-group-three {
+    top: 25%;
+    left: 15rem;
+}
+
+.popup-section-eleven .note-text-three {
+    left: 1.5rem;
+    bottom: -.1rem;
+    width: 13rem;
+}
+
+.popup-section-eleven .note-group-four {
+    top: 100%;
+    left: 15rem;
+}
+
+.popup-section-eleven .note-text-four {
+    left: 1.5rem;
+    bottom: -.1rem;
+    width: 12rem;
+}
+
+
+.popup-section-eleven .image-one {
+    top: 40%;
+    left: 2rem;
+}
+
+.popup-section-eleven .image-two {
+    top: 50%;
+    left: -10rem;
+}
+
+.popup-section-eleven .image-three {
+    top: -30%;
+    left: -2rem;
+}
+
+.popup-section-eleven .image-four {
+    top: 5%;
+}
+
+.popup-section-eleven .image-five {
+    top: -30%;
+    left: 10rem;
+}
+
+.popup-section-eleven .image-six {
+    top: 50%;
+    left: 19rem;
+}
+
+.popup-section-eleven .image-seven {
+    bottom: 10rem;
+    left: 12rem;
+    z-index: 20;
+    width: 70%;
+}
+
+/* Section TWELVE  ----------------------------------------------------------------------------------------------------------------*/
+
+
+.popup-section-twelve .note-group-one {
+    top: 60%;
+    left: 12rem;
+}
+
+.popup-section-twelve .note-text-one {
+    transform: rotate(6.78deg);
+    left: 1.7rem;
+    bottom: 1.2rem;
+    width: 11rem;
+}
+
+.popup-section-twelve .note-group-two {
+    top: 60%;
+    left: 9rem;
+}
+
+.popup-section-twelve .note-text-two {
+    transform: rotate(4.66deg);
+    left: 1.7rem;
+    bottom: 1.5rem;
+    width: 16.125rem;
+}
+
+.popup-section-twelve .image-one {
+    top: 50%;
+    left: 4rem;
+}
+
+.popup-section-twelve .image-two {
+    top: -20%;
+    left: -1rem;
+}
+
+.popup-section-twelve .image-three {
+    top: 50%;
+}
+
+.popup-section-twelve .image-four {
+    top: -10%;
+    left: 11rem;
+    z-index: 10;
+}
+
+.popup-section-twelve .image-five {
+    top: 50%;
+    left: 25rem;
+}
+
+.popup-section-twelve .image-six {
+    transform: rotate(-6deg);
+    top: 43%;
+    left: 4rem;
+    z-index: 11;
+}
+
+/* Section THIRTEEN  ----------------------------------------------------------------------------------------------------------------*/
+
+
+.popup-section-thirteen .note-group-one {
+    top: 2%;
+    left: 8rem;
+}
+
+.popup-section-thirteen .note-text-one {
+    transform: rotate(-5.15deg);
+    left: 1.7rem;
+    bottom: .7rem;
+    width: 11.1875rem;
+}
+
+.popup-section-thirteen .image-one {
+    top: 35%;
+    left: 2rem;
+}
+
+.popup-section-thirteen .image-two {
+    top: -15%;
+    left: -17rem;
+}
+
+.popup-section-thirteen .image-three {
+    top: 55%;
+}
+
+.popup-section-thirteen .image-four {
+    top: 5%;
+    right: -1rem;
+    z-index: 8;
+}

@@ -1,0 +1,238 @@
+@import 'variables';
+
+article {
+    width: 100%;
+    margin-bottom: 2rem;
+    /* max-height: 70%; */
+    position: relative;
+    /* top: 15%; */
+
+    &.inactive {
+        .line {background-color: $primary-dark;}
+        .movie-time {background-color: $primary-medium;}
+        h1 {color: $primary-medium;}
+        .regular {color: $primary-medium;}
+        .related-title {h2 {color: $primary-medium;}}
+        .related-bullet {background-color: $primary-dark;}
+        .footnote {color: $primary-medium;}
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+            .line {background-color: $primary-medium;}
+            .movie-time {background-color: $primary-light;}
+            h1 {color: $primary-light;}
+        }
+    }
+}
+
+.text-layout {
+    width: 100%;
+    padding: 0rem $text-layout-phoriz;
+    position: relative;
+
+}
+
+.line {
+    width: 0.25rem;
+    height: $line-length;
+    background-color: $primary-medium;
+    transition: $bg-color-trans;
+    position: absolute;
+    left: 0;
+
+}
+
+.line-hover {
+    width: 0.188rem;
+    height: 100%;
+
+    max-height: $line-length;
+    background-color: $primary-dark;
+
+    position: absolute;
+    left: -$text-layout-phoriz;
+}
+
+.time-frame {
+
+    margin-bottom: 1rem;
+
+    h2 {display: inline-block;}
+
+    .movie-time {
+        padding: $movie-time-pvert 0.25rem;
+        margin-right: 1.125rem; 
+        background-color: $primary-light;
+        color: $bg-solid;
+        transition: $bg-color-trans;
+    }
+
+    .run-time {
+        padding: $movie-time-pvert 0;
+        color: $secondary;
+        text-transform: lowercase;
+        /* text-shadow: $text-shadow $bg-overlay; */
+    }
+
+}
+
+.heading-frame {
+
+    margin-bottom: $text-layout-pvert;
+
+    h1 {
+        color: $primary-light;
+        transition: $text-color-trans;
+        /*text-shadow: $text-shadow $bg-overlay;*/
+    }
+}
+
+.slider {
+}
+
+.p-frame {
+
+    position: relative;
+    margin-bottom: $text-layout-pvert;
+    /* depreciated, fix this */
+    // mask-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1),transparent);
+    /* -webkit-mask-image: -webkit-gradient(linear, left 55%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.1))); */
+
+    min-height: 0;
+    max-height: 4.75rem;
+    overflow: hidden;
+
+    &:hover {
+        max-height: none;
+        overflow: visible;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    p {
+        color: $primary-light;
+        transition: $text-color-trans;
+    }
+}
+
+.related-frame {
+    position:relative;
+    height: 1.5rem;
+    overflow: hidden;
+    //padding-bottom: 0.5rem;
+
+    &:hover {
+        height: auto;
+        overflow: visible;
+
+        img {
+            transform: scaleY(-1) translateY(0.063rem);
+        }
+    }
+
+    .line-hover {
+        min-height: 2.625rem;
+    }
+}
+
+.related-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-bottom: $related-events-pvert;
+
+    h2 {
+        color: $primary-light;
+        transition: $text-color-trans;
+        margin-right: 0.875rem;
+        /*text-shadow: $text-shadow $bg-overlay;*/
+    }
+}
+
+.related-event {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+padding: $related-events-pvert 0;
+
+    &:hover {
+        cursor: pointer;
+        .related-bullet {
+        background-color: $primary-light;
+    }
+}
+
+    p {
+        color: $primary-light;
+        transition: $text-color-trans;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /*text-shadow: $text-shadow $bg-overlay;*/
+    }
+}
+
+.related-event:last-of-type {
+    margin-bottom: 0;
+}
+
+.related-bullet {
+    width: 1rem;
+    height: 0.188rem;
+    background-color: $primary-medium;
+    transition: $bg-color-trans;
+    margin-right: 1rem;
+    margin-top: 0.375rem;
+    flex-shrink: 0;
+}
+
+.image-layout {
+    width: 100%;
+    height: 100%;
+
+    .image-A, .image-B {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+}
+
+.image-A {
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.image-B {
+    width: 80%;
+    padding-top: 45%;
+}
+
+.image-overlay {
+
+}
+
+.location {
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    text-align: right;
+
+    h2 {
+        color: $primary-light;
+    }
+
+    h3 {
+        color: $primary-medium;
+    }
+}

@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@import 'flexboxgrid';
+@import 'type';
+@import 'variables';
+@import 'main';
+@import 'nav';
+
+html, body {
+    margin: 0;
+}
+
+img {
+    /* max-width: 100%; */
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    min-height: 630px;
+    min-width: 992px;
+}
+
+.all-content {
+    padding: 3rem 3.125rem;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+
+}
+
+.rowheight {
+    height: 100%;
+    /* problem: adding extra space at bottom of page
+    overflow: hidden; */
+}
+
+.columnheight {
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+}
+// For more styling related to nav, see nav.scss
+
+main {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    top: 20%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+// For more styling related to main, see main.scss
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    cursor: wait;
+    overflow: hidden;
+
+    img {
+        height: 100vh;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.intro-overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(21,30,35,0.65);
+    mix-blend-mode: hard-light;
+}
+
+.intro-textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1, h2 {
+        color: $primary-light;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 4rem;
+    }
+}
+
+.bg-overlay, .bg, .bg-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.bg-gradient {
+    z-index: 15;
+    background-image: linear-gradient(to right, rgba(3,7,10,0.6), rgba(3,7,10,0.2), rgba(3,7,10,0), rgba(3,7,10,0));
+}
+
+.bg-overlay {
+    // background-image: linear-gradient(to right, rgba(21,30,35,1), rgba(21,30,35, 0.85));
+    background-color: $bg-overlay;
+    mix-blend-mode: hard-light;
+    overflow: hidden;
+    z-index: 10;
+
+}
+
+.bg-stripe {
+    height: 17%;
+    background-color: $red;
+    margin-bottom: 3vh;
+    display: none;
+}
+
+.bg {
+    background-color: $bg-solid;
+    overflow: hidden;
+    img {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        /* filter: blur(0.15rem);
+        -webkit-filter: blur(0.15rem); */
+
+        &.visible {
+            opacity: 1;
+        }
+    }
+}
+
+.viewport-warning {
+    position: absolute;
+    z-index: 1500;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-solid;
+
+    h2 {
+        color: $primary-medium;
+        padding: 2rem;
+    }
+}
+
+@media(min-width:992px) {
+    .viewport-warning {
+        display: none;
+    }
+}
+
+// For all styling related to <main>, see main.scss
+// For all styling related to <nav>, see nav.scss 

@@ -1,0 +1,625 @@
+* {box-sizing: border-box;}
+
+@import 'flexboxgrid';
+@import 'variables';
+@import 'typography';
+
+html, body {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+
+html {
+    overflow-y: hidden;
+}
+
+.section {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+body {
+    .section:nth-child(2) {
+        background-color: $grey2;
+        outline: 10rem solid $grey2;
+        @media (min-width: 80rem){
+            outline: 30rem solid $grey2;
+        }
+    }
+    .section:nth-child(3) {
+        background-color: $grey3;
+    }
+    .section:nth-child(4) {
+        background-color: $pink1;
+        outline: 10rem solid $pink1;
+        position: relative;
+        @media (min-width: 80rem){
+            outline: 30rem solid $pink1;
+        }
+    }
+    .section:nth-child(5) {
+        background-color: $pink2;
+    }
+    .section:nth-child(6) {
+        background-color: $green1;
+        outline: 10rem solid $green1;
+        z-index: 0;
+        @media (min-width: 80rem){
+            outline: 30rem solid $green1;
+        }
+    }
+    .section:nth-child(7) {
+        background-color: $red3;
+        width: 20vw;
+        min-width: 30rem;
+    }
+    .section:nth-child(8) {
+        background-color: $red3;
+        outline: 10rem solid $red3;
+        color: white;
+        z-index: 1;
+        @media (min-width: 80rem){
+            outline: 20rem solid $red3;
+        }
+    }
+    .section:nth-child(9) {
+        background-color: $red2;
+        color: white;
+    }
+    .section:nth-child(10) {
+        background-color: $blue1;
+        outline: 10rem solid $blue1;
+        z-index: 0;
+        @media (min-width: 80rem){
+            outline: 30rem solid $blue1;
+        }
+    }
+    .section:nth-child(11) {
+        background-color: $blue2;
+        z-index: 1;
+    }
+    .section:nth-child(12) {
+        background-color: $blue1;
+        outline: 10rem solid $blue1;
+        @media (min-width: 80rem){
+            outline: 30rem solid $blue1;
+        }
+    }
+    .section.bw {
+        background-color: $grey2;
+        outline: 10rem solid $grey2;
+        @media (min-width: 80rem){
+            outline: 30rem solid $grey2;
+        }
+    }
+}
+
+.section:nth-child(odd) {
+    transform: skew(-20deg);
+    z-index: 1;
+    .img {
+        transform: $negskew;
+    }
+}
+
+.homeclick {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 3;
+    background-color: white;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    transition: all 0.25s;
+    &:hover {
+        box-shadow: none;
+        border: 2px solid #E8B70B;
+        svg path {
+            fill: #E8B70B
+        }
+    }
+    svg {
+        width: 2rem;
+        transition: all 0.25s;
+    }
+}
+
+.home {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    .container-fluid {
+        position: relative;
+        bottom: 0;
+        max-height: 36%;
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            height: 100%;
+        }
+    }
+}
+
+.homebuttons {
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 4rem;
+    .homebutton {
+        padding: 1.5rem;
+        height: 25vh;
+        background: #555;
+        color: white;
+        margin: 0 0.5rem 0 0.5rem;
+        position: relative;
+        bottom: -1rem;
+        transition: all 0.5s;
+        h2 {
+            position: absolute;
+            top: -2rem;
+            margin: 0;
+            left: 40%;
+            transform: skew(20deg) translateX(-50%);
+            text-align: center;
+        }
+        &:hover {
+            bottom: 0rem;
+        }
+        &.homebutton-one:hover {
+            background: $grey3;
+        }
+        &.homebutton-two:hover {
+            background: $pink3;
+        }
+        &.homebutton-three:hover {
+            background: $green4;
+        }
+        &.homebutton-four:hover {
+            background: $red1;
+        }
+        &.homebutton-five:hover {
+            background: $blue2;
+        }
+    }
+}
+
+
+.flashback-text {
+    z-index: 1;
+}
+
+.cars {
+    width: 80vw;
+    max-height: 50vh;
+    position: absolute;
+    bottom: 5vh;
+    left: 10vw;
+    @media (max-width: 62rem) {
+        width: 70vw
+    }
+    @media (max-height: 42rem){
+        bottom: 0;
+    }
+    @media (max-height: 36rem) and (min-width: 75rem){
+        bottom: -15vh;
+    }
+}
+
+.mom {
+    width: 40vw;
+    position: absolute;
+    bottom: 30vh;
+    right: 0;
+    max-height: 50vh;
+    @media (min-width: 62rem) {
+        width: 40vw;
+        right: 5vw;
+        bottom: 40vh;
+    }
+    @media (max-height: 36rem) and (min-width: 75rem){
+        max-height: 60vh;
+        bottom: 20vh;
+    }
+}
+
+.baby {
+    position: absolute;
+    bottom: 0;
+    left: -10vw;
+    height: 55vh;
+    transition: all 0.5s;
+    @media (min-width: 48rem) {
+        left: 7vw;
+        height: 60vh;
+    }
+    @media (min-width: 56rem) {
+        left: 10vw;
+    }
+    @media (max-height: 34rem) and (min-width: 50rem){
+        left: 38vw;
+    }
+}
+
+.deb {
+    position: absolute;
+    bottom: 0;
+    left: 60vw;
+    height: 75vh;
+    transition: all 0.5s;
+    @media (min-width: 46rem) {
+        left: 70vw;
+    }
+    @media (min-width: 64rem) {
+        left: 60vw;
+    }
+    @media (max-height: 34rem) and (min-width: 50rem){
+        left: 80vw;
+    }
+}
+
+
+.music {
+    display: none;
+    position: absolute;
+    left: 62vw;
+    top: 13vh;
+    &:hover {
+        cursor: pointer;
+    }
+    @media (min-width: 46rem) {
+        left: 72vw;
+    }
+    @media (min-width: 64rem) {
+        left: 62vw;
+    }
+    @media (max-height: 34rem) and (min-width: 50rem) {
+        left: 80vw;
+        top: 5vh;
+    }
+}
+
+.music-text {
+    position: absolute;
+    width: 60%;
+    top: 7%;
+    left: 27%;
+    @media (min-width: 46rem) {
+        width: 40%;
+        top: 2%;
+    }
+    @media (min-width: 64rem) {
+        left: 24%;
+        width: 60%;
+        top: 7%;
+    }
+    @media (max-height: 34rem) and (min-width: 50rem) {
+        width: 40%;
+        top: 2%;
+    }
+}
+
+.notes {
+    display: none;
+    position: absolute;
+    width: 25vw;
+    top: 18vh;
+    left: 52vw;
+    &:hover {
+        cursor: pointer;
+    }
+    .notes-music {
+        width: 10vw; 
+    }
+    .notes-baby {
+        position: absolute;
+        top: -5vh;
+        left: 2.5vw;
+        color: $green3;
+        @media (min-width: 42rem) {
+            top: -3vh;
+        }
+        @media (min-width: 48rem) {
+            top: 0;
+        }
+        @media (min-width: 64rem) {
+            top: 2vh;
+        }
+    }
+    @media (min-width: 46rem) {
+        left: 63vw;
+        top: 20vh;
+    }
+    @media (min-width: 64rem) {
+        left: 52vw;
+    }
+    @media (max-height: 34rem) and (min-width: 50rem){
+        left: 70vw;
+        top: 14vh;
+    }
+}
+
+.tape1 {
+    z-index: 2;
+    height: 17vh;
+    position: absolute;
+    top: 37vh;
+    left: 55vw;
+    transition: all 0.5s;
+    @media (min-width: 46rem) {
+        left: 65vw;
+    }
+    @media (min-width: 64rem) {
+        left: 55vw;
+    }
+    @media (min-width: 80rem) {
+        left: 56vw; 
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    @media (max-height: 34rem) and (min-width: 50rem){
+        left: 76.5vw;
+    }
+}
+
+.text {
+    z-index: 2;
+    min-width: 20rem;
+}
+
+.b {
+    position: absolute;
+}
+
+.a {
+    position: absolute;
+    left: 1.5vw;
+    top: 1vh;
+}
+
+.b2 {
+    position: absolute;
+    left: 3vw;
+}
+
+.y {
+    position: absolute;
+    left: 4.5vw;
+    top: 1vh;
+}
+
+
+.driver-section {
+    position: relative;
+}
+
+.car {
+    width: 45vw;
+    max-height: 30vh;
+    position: fixed;
+    bottom: 25vh;
+    left: 5vw;
+    z-index: 2;
+    transition: all 0.5s;
+    @media (max-height: 40rem) {
+        width: 35vw;
+        bottom: 15vh;
+    }
+}
+
+.windows {
+    width: 40vw;
+    position: relative;
+    top: -5vh;
+    right: -15vw;
+        &:hover {
+            cursor: pointer;
+        }
+    @media (max-width: 80rem) {
+        top: 0;
+    }
+    @media (max-width: 68rem) {
+        width: 50vw;
+        right: -10vw;
+    }
+}
+
+.window {
+    width: 100%;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.window-open {
+    position: absolute;    
+    width: 36.65vw;
+    display: none;
+    top: 12.25vh;
+    left: 1.75vw;
+    &:hover {
+        cursor: pointer;
+    }
+    @media (max-width: 80rem) {
+        top: 10.5vh;
+    }
+    @media (max-width: 68rem) {
+        width: 46vw;
+        right: -10vw;
+        top: 12vh;
+    }
+    @media (max-width: 58rem) {
+        top: 10vh;
+        width: 46vw;
+    }
+
+}
+
+.floor {
+    position: absolute;
+    width: 120vw;
+    height: 30vh;
+    background-color: $green2;
+    bottom: 0;
+    left: -20vw;
+    transition: all 0.5s;
+    @media (max-height: 40rem) {
+        height: 20vh;
+    }
+}
+
+.wall {
+    position: absolute;
+    top: 0;
+    right: -20vw;
+    width: 75vw;
+    height: 100vh;
+    background-color: $green3;
+    transition: all 0.5s;
+}
+
+.gun {
+    position: absolute;
+    width: 80vh;
+    left:-4vw;
+    top: 20vh;
+    z-index:2;
+    height: 60vh;
+    transition: all 0.25s;
+    @media (max-height: 40rem) and (min-width: 60rem){
+        width: 100vh;
+    }
+}
+
+
+.bullet {
+    display: none;
+    position: fixed;
+    height: 60vh;
+    left: 35vw;
+    top: 0vh;
+    width:15vw;
+    z-index: 1;
+    transition: all 0.25s;
+    @media (max-height: 42rem){
+        width:12vw;
+    }
+    @media (max-height: 36rem){
+        width:10vw;
+    }
+}
+
+.row-bottom {
+    position: absolute;
+    top: 50vh;
+    left: 5rem;
+    transition: all 0.25s;
+    @media (max-height: 36rem) and (min-width: 60rem) {
+        top: 45vh;
+        left: 3rem;
+    }
+    @media (max-height: 26rem) and (min-width: 60rem) {
+        top: 30vh;
+        left: 7rem;
+    }
+}
+
+.police-section {
+    position: relative;
+        .row {
+            div {
+                padding-bottom: 2rem;
+                padding-top: -1rem;
+                background-color: $blue1;
+                z-index: 2;
+            }
+        }
+}
+
+.police {
+    position: absolute;
+    width: 55vw;
+    bottom: 2rem;
+    left: -10vw;
+    z-index: 3;
+    transition: all 0.25s;
+    @media (max-height: 42rem) {
+        bottom: -10vh;
+        left: -15vw;
+        max-height: 80vh;
+    }
+    @media (max-height: 36rem) {
+        bottom: -20vh;
+        left: -15vw;
+        max-height: 80vh;
+    }
+    @media (max-height: 28rem) {
+        bottom: -30vh;
+        max-height: 80vh;
+        left: -15vw;
+    }
+}
+
+.cell {
+    position: absolute;
+    height: 105vh;
+    bottom: 0;
+    left: 40vw;
+    transition: all 0.25s;
+    @media (max-height: 40rem) and (min-width: 75rem) {
+        left: 50vw;
+        height: 120vh;
+        bottom: -5vh;
+    }
+    @media (max-height: 30rem) and (min-width: 75rem) {
+        left: 50vw;
+        height: 140vh;
+        bottom: -8vw;
+    }
+}
+
+.final-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (max-height: 42rem) and (min-width: 68rem){
+        flex-direction: row;
+    }
+}
+
+.postcard {
+    height: 60vh;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+    @media (max-height: 40rem) and (min-width: 68rem){
+        height: 70vh;
+    }
+}
+
+.postcard-back {
+    height: 60vh;
+    display: none;
+    margin-bottom: 0.125rem;
+    &:hover {
+        cursor: pointer;
+    }
+    @media (max-height: 40rem) and (min-width: 68rem){
+        height: 70vh;
+    }
+}

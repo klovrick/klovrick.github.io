@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Usual Suspects | Interactive Timeline</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Mono:500|Roboto:400&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!--
+        To do:
+        animate hovers on text and related events
+        drop shadows
+        fix widows
+        intro popup
+        screen size too small dialog
+    -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="intro">
+            <img src="img/scenes/intro.jpg">
+            <div class="intro-overlay">
+            </div>
+            <div class="intro-textbox">
+                <h1 class="medium">
+                    The Usual Suspects
+                </h1>
+                <h1 class="small">
+                    A Comprehensive Timeline
+                </h1>
+                <h2>Loading...</h2>
+            </div>
+        </div>
+        <div class="container-fluid all-content">
+            <div class="row rowheight">
+                <div class="col-md-3 col-lg-4 columnheight">
+                    <nav>
+                        <div class="playbar-nav">
+                            <div class="nav-arrow" id="up">
+                            </div>
+                            <div class="events-section" id="s-1">
+                                <div class="event-marker" id="ev-0">
+                                </div>
+                            </div>
+                            <div class="events-section" id="s-2">
+                                <div class="event-marker" id="ev-1">
+                                </div>
+                                <div class="event-marker" id="ev-2">
+                                </div>
+                                <div class="event-marker" id="ev-3">
+                                </div>
+                                <div class="event-marker" id="ev-4">
+                                </div>
+                                <div class="event-marker" id="ev-5">
+                                </div>
+                                <div class="event-marker" id="ev-6">
+                                </div>
+                                <div class="event-marker" id="ev-7">
+                                </div>
+                                <div class="event-marker" id="ev-8">
+                                </div>
+                            </div>
+                            <div class="events-section" id="s-3">
+                                <div class="event-marker" id="ev-9">
+                                </div>
+                                <div class="event-marker" id="ev-10">
+                                </div>
+                                <div class="event-marker" id="ev-11">
+                                </div>
+                            </div>
+                            <div class="events-section" id="s-4">
+                                <div class="event-marker" id="ev-12">
+                                </div>
+                                <div class="event-marker" id="ev-13">
+                                </div>
+                                <div class="event-marker" id="ev-14">
+                                </div>
+                                <div class="event-marker" id="ev-15">
+                                </div>
+                            </div>
+                            <div class="events-section" id="s-5">
+                                <div class="event-marker" id="ev-16">
+                                </div>
+                                <div class="event-marker" id="ev-17">
+                                </div>
+                                <div class="event-marker" id="ev-18">
+                                </div>
+                                <div class="event-marker" id="ev-19">
+                                </div>
+                            </div>
+                            <div class="events-section" id="s-6">
+                                <div class="event-marker" id="ev-20">
+                                </div>
+                                <div class="event-marker" id="ev-21">
+                                </div>
+                                <div class="event-marker" id="ev-22">
+                                </div>
+                                <div class="event-marker" id="ev-23">
+                                </div>
+                                <div class="event-marker" id="ev-24">
+                                </div>
+                                <div class="event-marker" id="ev-25">
+                                </div>
+                                <div class="event-marker" id="ev-26">
+                                </div>
+                            </div>
+                            <div class="events-section" id="s-7">
+                                <div class="event-marker" id="ev-27">
+                                </div>
+                                <div class="event-marker" id="ev-28">
+                                </div>
+                                <div class="event-marker" id="ev-29">
+                                </div>
+                                <div class="event-marker" id="ev-30">
+                                </div>
+                                <div class="event-marker" id="ev-31">
+                                </div>
+                            </div>
+                            <div class="nav-arrow" id="down">
+                            </div>
+                        </div>
+                        <div class="chapter-dividers">
+                            <div class="chapter" id="c-1">
+                                <div class="numeral">
+                                    <h2>I.</h2>
+                                </div>
+                                <h2>Keyser Soze: Origins</h2>
+                            </div>
+                            <div class="chapter" id="c-2">
+                                <div class="numeral">
+                                    <h2>II.</h2>
+                                </div>
+                                <h2>Prologue</h2>
+                            </div>
+                            <div class="chapter" id="c-3">
+                                <div class="numeral">
+                                    <h2>III.</h2>
+                                </div>
+                                <h2>NYPD Revenge Scheme</h2>
+                            </div>
+                            <div class="chapter" id="c-4">
+                                <div class="numeral">
+                                    <h2>IV.</h2>
+                                </div>
+                                <h2>L.A. Diamond Heist</h2>
+                            </div>
+                            <div class="chapter" id="c-5">
+                                <div class="numeral">
+                                    <h2>V.</h2>
+                                </div>
+                                <h2>Kobayashi Encounters</h2>
+                            </div>
+                            <div class="chapter" id="c-6">
+                                <div class="numeral">
+                                    <h2>VI.</h2>
+                                </div>
+                                <h2>Ship Raid</h2>
+                            </div>
+                            <div class="chapter" id="c-7">
+                                <div class="numeral">
+                                    <h2>VII.</h2>
+                                </div>
+                                <h2>Aftermath</h2>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-9 col-lg-8 columnheight">
+                    <main id="article-content">
+                        <!-- for loop inserts content here -->
+                    </main>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gradient">
+        </div>
+        <div class="bg-overlay">
+        </div>
+        <div class="bg" id="bg">
+            <img src="img/scenes/ev2-0.jpg">
+        </div>
+        <div class="viewport-warning">
+            <h2>Screen width must be at least 992 pixels</h1>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

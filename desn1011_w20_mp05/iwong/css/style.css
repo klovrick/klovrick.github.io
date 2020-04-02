@@ -1,0 +1,968 @@
+* {box-sizing: border-box;}
+
+html {
+    background-color: #FFE5E6;
+    background-image: url('../images/background-grid.png');
+    background-size: cover;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.cover {
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    position: relative;
+    width: 100%;
+    bottom: 5%;
+    z-index: 2;
+}
+
+.subtitle{
+    position: relative;
+    color: #F96468; 
+    font-size: 2.3rem;
+    padding-top: 1rem;
+    z-index: 2;
+}
+
+.arrow-button {
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1.5rem solid #F96468;
+    z-index: 2;
+  }
+
+.top-right-stickers{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.bottom-right-stickers {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.bottom-center-stickers {
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    transform: translateX(-50%); 
+}
+
+.bottom-left-stickers {
+    position: absolute;
+    bottom: 0px;
+    left:0px; 
+}
+
+.right-stickers {
+    position: absolute;
+    bottom: 20%;
+}
+
+.polaroid {
+    display: block;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 4px 0px 4px rgba(0,0,0,0.25), inset 3px 0px 4px rgba(0,0,0,0.25);
+}
+
+a.polaroid {
+    animation: pulse 1s infinite;
+    transition: all 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.99);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+a.polaroid:hover {
+    animation: none;
+    box-shadow: inset 4px 0px 4px rgba(0,0,0,0.25), inset 3px 0px 4px rgba(0,0,0,0.25);
+}
+
+a.polaroid .photo-1 {
+    transition: all 0.5s;
+}
+
+a.polaroid:hover .photo-1 {
+    filter: grayscale(100%);
+}
+
+.photo .photo-1 {
+    box-shadow: 4px 0px 4px rgba(0,0,0,0.25);
+}
+
+.polaroid-big {
+    padding: 1.35rem 1.35rem 0.5rem 1.35rem;
+    top: 3%;
+}
+
+.polaroid-big h1.special-caption {
+    font-size: 2.3rem;
+    color: #F96468;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.polaroid-small-1 {
+    position: relative;
+    width: 20rem;
+    height: 16rem;
+    top: 4rem;
+    left: 2rem;
+}
+
+.photo-2 {
+    position: absolute;
+    width: 95%;
+    height: auto;
+    top: -10%;
+}
+
+.polaroid-small-2 {
+    position: relative;
+    width: 20rem;
+    height: 16rem;
+    left: 1%;
+    top: 130%;
+}
+
+.photo-3 {
+    position: absolute;
+    width: 30rem;
+    height: 20rem;
+    left: 10%;
+    top: 10%;
+}
+
+.letter {
+    position: relative;
+    width: 30.5rem;
+    height: 36rem;
+    left: 0.5rem;
+    top: 20%;
+    z-index: 2;
+}
+
+.paper {
+    position: absolute;
+    z-index: -1;
+}
+
+.line{
+    position: absolute;
+    width: 20.4375rem;
+    height: 26.625rem;
+    left: 10%;
+    top: 10%;
+}
+
+.question {
+    position: absolute;
+    font-size: 1.5rem;
+    line-height: 3.35rem;
+    color: #F96468;
+    left: 3.5rem;
+    top: 4rem;
+}
+
+.answer {
+    position: absolute;
+    font-size: 1.5rem;
+    line-height: 3.35rem;
+    text-align: right;
+    color: #10416D;
+    top: 4rem;
+    right: 25%;
+}
+
+.answer-long {
+    position: absolute;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    text-align: right;
+    color: #10416D;
+    width: 55%;
+    bottom: 10%;
+    right: 23%;
+}
+
+.tape {
+    position: absolute;
+    bottom: 80%;
+    width: 100%;
+    margin-left: 80%;
+}
+
+.tape h2 {
+    position: absolute;
+    color: #ffffff;
+    bottom: 13%;
+    left: 18%;
+    font-size: 2.3rem;
+    transform: rotate(-3.5deg);
+}
+
+
+.character-development main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.cher-photos {
+    position: relative;
+}
+
+.cher-photos a.cher-photo-link:hover img.cher-photo {
+    transform: scale(1.1);
+    filter: grayscale(100%);
+}
+
+.cher-photos .cher-photo{
+    width: 100%;
+    display: block;
+    transition: all 0.5s;
+}
+
+.home-button {
+    position: fixed;
+    right: 3%;
+    top: 3%;
+}
+
+.tape-1 {
+    position: absolute;
+    width: 20.75rem;
+    height: 7.1875rem;
+    bottom: 16%;
+    left: 3%;
+    z-index: 1;
+}
+
+.tape-caption-1 {
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    transform: rotate(2deg);
+    width: 75%;
+    bottom: 15%;
+    left: 7%;
+}
+
+.tape-2 {
+    position: absolute;
+    width: 20.75rem;
+    height: 7.1875rem;
+    top: 60%;
+    right: -13%;
+    z-index: 1;
+}
+
+.tape-caption-2 {
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    width: 75%;
+    top: 8%;
+    left: 10%;
+}
+
+.tape-3 {
+    position: absolute;
+    width: 21.5rem;
+    height: 7.1875rem;
+    top: 72%;
+    right: -20%;
+    z-index: 1;
+}
+
+.tape-caption-3 {
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    transform: rotate(-2.5deg);
+    width: 75%;
+    top: 23%;
+    left: 7%;
+}
+
+.tape-4 {
+    position: absolute;
+    width: 20.75rem;
+    height: 7.1875rem;
+    top: 60%;
+    right: -13%;
+    z-index: 1;
+}
+
+.tape-caption-4 {
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    transform: rotate(2deg);
+    width: 80%;
+    top: 13.5%;
+    right: 10%;
+}
+
+.tape-5 {
+    position: absolute;
+    width: 21.5rem;
+    height: 7.1875rem;
+    top: 72%;
+    right: -5%;
+}
+
+.tape-caption-5 {
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    transform: rotate(-2.5deg);
+    width: 75%;
+    top: 20%;
+    right: 13%;
+}
+
+.previous-page-button {
+    position: absolute;
+    bottom: 7%;
+    left: 2.5%;
+}
+
+.home-button-b {
+    position: absolute;
+    top: 5%;
+    right: 2.6%;
+}
+
+.polaroid-chapter-1{
+    position: relative;
+    width: 29.3rem;
+    height: 34.4rem;
+    padding: 1.9rem 1.43rem 0 1.43rem;;
+    left: 8%;
+    top: 8%;
+    background-color: #ffffff;
+    box-shadow: 4px 0px 4px rgba(0,0,0,0.25), inset 3px 0px 4px rgba(0,0,0,0.25);
+}
+
+.polaroid-caption-1 {
+    font-size: 1.3rem;
+    color: #333333;
+    line-height: 2.1875rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.chapter-1-tape {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 5%;
+    left: 80%;
+}
+
+h2.tape-caption-1 {
+    position: absolute;
+    font-size: 1.8rem;
+    color: white;
+    top: 10%;
+    left: 1%;
+    transform: rotate(-2.5deg);
+    width: 100%;
+}
+
+.letter-1 {
+    position: relative;
+    width: 30rem;
+    height: 34.5rem;    
+    z-index: 2;
+}
+
+.paper-2 {
+    position: absolute;
+    z-index: -1;
+    top: 32%;
+    right: -8%;
+}
+
+h4.text-start-1 {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #F96468;
+    right: 43%;
+    top: 30%;
+}
+
+.paragraph-1 {
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    top: 42%;
+    right: -3%;
+    width: 73%;
+}
+
+h4.text-end-1 {
+    position: absolute;
+    font-size: 1.56rem;
+    line-height: 2.25rem;
+    color: #F96468;
+    width: 80%;
+    right: -10%;
+    top: 72%;
+}
+
+.paragraph-2 {
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    bottom: -28%;
+    right: -3%;
+    width: 73%;
+}
+
+.sticker-1 {
+    position: absolute;
+    right: 12%;
+    bottom: 3%;
+    z-index: 2;
+}
+
+.cher-sticker{
+    position: absolute;
+    z-index: 2;
+    right: 11%;
+    bottom: 13%;
+}
+
+.letter-2 {
+    position: relative;
+    width: 33em;
+    height: 42.1875rem;
+    z-index: 2;
+}
+
+.paper-3 {
+    position: absolute;
+    z-index: -1;
+    top: 8%;
+    left: 25%;
+}
+
+.text-start-2 {
+    position: absolute;
+    font-size: 1.25rem;
+    color: #F96468;
+    width: 70%;
+    top: 19%;
+    left: 32%;
+}
+
+.paragraph-3 {
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    width: 70%; 
+    top: 29.5%;
+    left: 32%;
+}
+
+.text-end-2 {
+    position: absolute;
+    font-size: 1.25rem;
+    color: #F96468;
+    width: 70%;
+    top: 57%;
+    left: 32%;
+}
+
+.paragraph-4 {
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    width: 70%;
+    top: 68%;
+    left: 32%;
+}
+
+.polaroid-chapter-2 {
+    position: relative;
+    width: 31.375rem;
+    height: 32.75rem;
+    background-color: #ffffff;
+    box-shadow: 4px 0px 4px rgba(0,0,0,0.25), inset 3px 0px 4px rgba(0,0,0,0.25);
+    right: -6%;
+    bottom: -12%;
+}
+
+.chapter-2-photo {
+    position: absolute;
+    width: 33rem;
+    height: 27rem;
+    padding: 1.5rem;
+}
+
+.polaroid-caption-2 {
+    position: absolute;
+    font-size: 1.3rem;
+    color: #333333;
+    line-height: 2.1875rem;
+    text-align: center;
+    bottom: 6%;
+    width: 85%;
+    left: 7.5%;
+}
+
+.chapter-2-tape {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -18%;
+    right: -15%;
+}
+
+h2.tape-caption-2 {
+    position: absolute;
+    font-size: 1.8rem;
+    color: white;
+    width: 100%;
+    transform: rotate(-3deg);
+    left: 1%;
+    bottom: 18%;
+}
+
+.chapter-2-sticker-2 { 
+    position: absolute;
+    right: 9%;
+    bottom: 5%;
+    z-index: 2;
+}
+
+.chapter-2-sticker-1 {
+    position: absolute;
+    left: 8%;
+    top: 3%;
+    z-index: 2;
+}
+
+.polaroid-chapter-3{
+    position: relative;
+    width: 26.75rem;
+    height: 40rem;
+    padding-top: 1.9rem;
+    padding-left: 1.43rem;
+    padding-right: 1.43rem;
+    left: 10%;
+    top: 8%;
+    background-color: #ffffff;
+    box-shadow: 4px 0px 4px rgba(0,0,0,0.25), inset 3px 0px 4px rgba(0,0,0,0.25);
+}
+
+.chapter-3-photo {
+    position: absolute;
+    left: 6%;
+}
+
+.polaroid-caption-3 {
+    position: absolute;
+    font-size: 1.3rem;
+    color: #333333;
+    line-height: 1.75rem;
+    text-align: center;
+    bottom: 1.5%;
+    width: 85%;
+    left: 7.5%;
+}
+
+.chapter-3-tape {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 80%;
+    top: 0;
+}
+
+h2.tape-caption-3 {
+    position: absolute;
+    font-size: 1.7rem;
+    color: white;
+    width: 100%;
+    transform: rotate(-3deg);
+    left: 0;
+    top: 10%;
+}
+
+.letter-3 {
+    position: relative;
+    width: 34em;
+    height: 41.8125rem;
+    z-index: -2;
+    right: 70%;
+    top: -13%;
+}
+
+.paper-4 {
+    position: absolute;
+    bottom: 73%;
+    left: -5%;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-start-3 {
+    position: absolute;
+    font-size: 1.125rem;
+    color: #F96468;
+    top: -64.5%;
+    left: 9.5%;
+}
+
+.paragraph-5 {
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    width: 78%;
+    top: -59%;
+    left: 9.5%;
+}
+
+.text-middle-3 {
+    position: absolute;
+    font-size: 1.125rem;
+    text-align: left;
+    color: #F96468;
+    width: 78%;
+    top: -43.5%;
+    left: 9.5%;
+}
+
+.paragraph-6{
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    width: 83%;
+    left: 9.5%;
+    top: -35%;
+}
+
+.text-end-3 {
+    position: absolute;
+    font-size: 1.125rem;
+    text-align: left;
+    color: #F96468;
+    width: 78%;
+    top: -23.5%;
+    left: 9.5%;
+}
+
+.paragraph-7{
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    width: 78%;
+    left: 9.5%;
+    top: -18%;
+}
+
+.sticker-3 {
+    position: absolute;
+    right: -4rem;
+    top: -2%;
+}
+
+.letter-4 {
+    position: relative;
+    width: 30rem;
+    height: 25rem;
+    z-index: 2;
+}
+
+.paper-5 {
+    position: absolute;
+    width: 83%;
+    height: auto;
+    z-index: -3;
+    left: 20%;
+    top: 3%;
+}
+
+.chapter-4-sticker-1{
+    position: absolute;
+    right: -15%;
+    top: 15%;
+}
+
+.chapter-4-sticker-3{
+    position: absolute;
+    bottom: -50%;
+    left: 102%;
+}
+
+.chapter-4-sticker-2{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.polaroid-chapter-4{
+    position: relative;
+    width: 31.1875rem;
+    height: 37rem; 
+    padding: 1.875rem 2.0625rem 0 2.0625rem;
+    background-color: #ffffff;
+    box-shadow: 4px 0px 4px rgba(0,0,0,0.25), inset 3px 0px 4px rgba(0,0,0,0.25);
+    top: 8%;
+    right: 30%;
+    z-index: 10;
+}
+
+.polaroid-caption-4 {
+    position: absolute;
+    font-size: 1.3rem;
+    color: #333333;
+    line-height: 2rem;
+    text-align: center;
+    top: 76%;
+    width: 85%;
+    left: 7.5%;
+}
+
+.chapter-4-tape {
+    position: absolute;
+    width: 28.5rem;
+    height: 11.5;
+    transform: rotate(3deg);
+    right: 80%;
+    top: 70%;
+    z-index: 10;
+}
+
+h2.tape-caption-4 {
+    position: absolute;
+    font-size: 1.7rem;
+    color: white;
+    transform: rotate(-3.5deg);
+    width: 100%;
+    left: 0;
+    top: 10%;
+}
+
+.text-start-4 {
+    position: absolute;
+    font-size: 1.25rem;
+    color: #F96468;
+    top: 29%;
+    left: 27%;
+}
+
+.paragraph-8{
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    width: 70%;
+    top: 39%;
+    left: 27%;
+}
+
+.text-end-4 {
+    position: absolute;
+    font-size: 1.25rem;
+    color: #F96468;
+    top: 99%;
+    left: 27%;
+}
+
+.paragraph-9{
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: left;
+    width: 70%;
+    bottom: -48%;
+    left: 27%;
+}
+
+.polaroid-chapter-5 {
+    position: relative;
+    width: 33rem;
+    height: 30rem; 
+    padding: 2rem 1.5rem 0 2.5em;
+    background-color: #ffffff;
+    box-shadow: 4px 0px 4px rgba(0,0,0,0.25), inset 3px 0px 4px rgba(0,0,0,0.25);
+    top: 30%;
+    left: 15%;
+    z-index: -8;
+}
+
+.polaroid-caption-5 {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #333333;
+    line-height: 2.5rem;
+    text-align: center;
+    width: 70%;
+    padding-top: 1rem;
+    right: 15%;
+}
+
+.chapter-5-tape {
+    position: absolute;
+    width: 28.5rem;
+    height: 11.5;
+    transform: rotate(6deg);
+    left: 45%;
+    top: -268%;
+}
+
+h2.tape-caption-5 {
+    position: absolute;
+    font-size: 1.7rem;
+    color: white;
+    width: 100%;
+    left: -1%;
+    top: 10%;
+}
+
+.letter-5 {
+    position: relative;
+    width: 35rem;
+    height: 25rem;
+}
+
+.paper-6 {
+    position: absolute;
+    width: 83%;
+    height: auto;
+    top: 13%;
+    right: 50%;
+    z-index: -10;
+}
+
+.text-start-5 {
+    position: absolute;
+    font-size: 1.25rem;
+    color: #F96468;
+    text-align: center;
+    line-height: 1.75rem;
+    top: 18%;
+    width: 50%;
+    left: -8%;
+}
+
+.paragraph-10{
+    position: absolute;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #10416D;
+    text-align: center;
+    width: 38%;
+    top: 36%;
+    left: -2%;
+}
+
+.text-end-5 {
+    position: absolute;
+    font-size: 1.5625rem;
+    color: #F96468;
+    top: 83%;
+    left: -15%;
+}
+
+.happy-sticker {
+    position: absolute;
+    bottom: -14%;
+    left: -3%;
+}
+
+.star-stickers {
+    position: absolute;
+    bottom: -63%;
+    left: -30%;
+}
+
+.answer-2 {
+    position: absolute;
+    font-size: 1.25rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #10416D;
+    bottom: -65%;
+    left: -21%;
+}
+
+.chapter-5-sticker-1{
+    position: absolute;
+    left: -38%;
+    bottom: 5%;
+}
+
+.princess-sticker {
+    position: absolute;
+    bottom: -63%;
+    left: -63%;
+    z-index: 3;
+}
