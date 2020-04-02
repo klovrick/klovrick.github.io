@@ -1,9 +1,14 @@
-$(document).ready(function() {
-    $('html, body, *').mousewheel(function(e, delta) {
-        this.scrollLeft -= (delta);
-        e.preventDefault();
+$(function() {
+
+    $("html").mousewheel(function(event, delta) {
+ 
+       this.scrollLeft -= (delta);
+ 
+       event.preventDefault();
+ 
     });
-});
+ 
+ });
 
 $('.menu').click(function(){
     openOrClose();

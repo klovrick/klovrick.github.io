@@ -1,3 +1,15 @@
+$(function() {
+
+    $("html").mousewheel(function(event, delta) {
+ 
+       this.scrollLeft -= (delta);
+ 
+       event.preventDefault();
+ 
+    });
+ 
+ });
+ 
 $('.close-popup').click(function (event) {
     event.preventDefault();
     $('.overlay').closest('.overlay').hideClass('.open');
